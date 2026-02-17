@@ -1,27 +1,5 @@
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
-
-const projects = [
-  {
-    title: "Gearbox Assembly Design",
-    category: "SolidWorks CAD",
-    description: "Complete multi-stage gearbox assembly with tolerance analysis and manufacturing drawings.",
-    image: project1,
-  },
-  {
-    title: "Pressure Vessel FEA",
-    category: "Stress Analysis",
-    description: "Finite element analysis of a high-pressure vessel with thermal-structural coupling and fatigue life prediction.",
-    image: project2,
-  },
-  {
-    title: "Aerodynamic CFD Study",
-    category: "Flow Simulation",
-    description: "Computational fluid dynamics analysis for drag reduction and thermal management optimization.",
-    image: project3,
-  },
-];
+import { Link } from "react-router-dom";
+import projects from "@/data/projects";
 
 const ProjectsSection = () => {
   return (
@@ -38,14 +16,15 @@ const ProjectsSection = () => {
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, i) => (
-            <article
-              key={project.title}
+            <Link
+              to={`/project/${project.slug}`}
+              key={project.slug}
               className="group overflow-hidden rounded-lg border border-border bg-card transition-all duration-300 hover:border-primary/50 hover:glow-sm"
               style={{ animationDelay: `${i * 0.15}s` }}
             >
               <div className="relative aspect-square overflow-hidden">
                 <img
-                  src={project.image}
+                  src={project.thumbnail}
                   alt={project.title}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
@@ -63,7 +42,7 @@ const ProjectsSection = () => {
                   {project.description}
                 </p>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </div>
