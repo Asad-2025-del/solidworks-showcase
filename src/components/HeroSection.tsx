@@ -24,7 +24,7 @@ const HeroSection = () => {
           CAD · Simulation · CFD Analysis
         </p>
         <h1 className="mb-6 text-5xl md:text-7xl lg:text-8xl font-bold leading-tight animate-fade-in-up">
-          <span className="text-gradient">DesignNCFD</span>
+          <span className="text-gradient">DesignnCFD</span>
         </h1>
         <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
           CAD modeling, SolidWorks design, ANSYS structural & CFD analysis — 
