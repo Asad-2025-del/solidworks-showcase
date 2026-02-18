@@ -1,25 +1,35 @@
-import { Cpu, Box, Wind, Wrench } from "lucide-react";
+import { Cpu, Box, Wind, Wrench, PenTool, Cog } from "lucide-react";
 
 const services = [
   {
     icon: Box,
-    title: "3D CAD Modeling",
-    description: "Parametric part and assembly design in SolidWorks with full documentation and manufacturing drawings.",
+    title: "CAD Modeling (2D & 3D)",
+    description: "Parametric part and assembly design with full documentation and manufacturing drawings.",
+  },
+  {
+    icon: PenTool,
+    title: "SolidWorks Design & Simulation",
+    description: "Complete product design with motion study, stress analysis, and thermal simulation.",
   },
   {
     icon: Cpu,
-    title: "FEA Stress Analysis",
-    description: "Static, dynamic, and thermal finite element analysis to validate designs before manufacturing.",
+    title: "ANSYS Structural & CFD",
+    description: "Static, dynamic, thermal FEA and computational fluid dynamics using ANSYS solvers.",
   },
   {
     icon: Wind,
-    title: "CFD Simulation",
-    description: "Flow simulation for thermal management, drag reduction, and fluid system optimization.",
+    title: "CFD Analysis",
+    description: "Fluid flow, thermal management, drag reduction, and system optimization studies.",
   },
   {
     icon: Wrench,
-    title: "Design Optimization",
+    title: "Product Design & Optimization",
     description: "Topology optimization and design studies to reduce weight, cost, and improve performance.",
+  },
+  {
+    icon: Cog,
+    title: "Mechanical System Design",
+    description: "Complete mechanical system design with engineering prototyping support and validation.",
   },
 ];
 
@@ -36,7 +46,7 @@ const ServicesSection = () => {
           </h2>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((svc) => (
             <div
               key={svc.title}

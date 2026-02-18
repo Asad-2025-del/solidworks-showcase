@@ -48,15 +48,15 @@ const ContactSection = () => {
           <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
               <Mail size={16} className="text-primary" />
-              <span>hello@engworks.com</span>
+              <span>Designncfd@gmail.com</span>
             </div>
             <div className="flex items-center gap-2">
               <Phone size={16} className="text-primary" />
-              <span>+1 (555) 123-4567</span>
+              <span>+92 337 8284111</span>
             </div>
             <div className="flex items-center gap-2">
               <MapPin size={16} className="text-primary" />
-              <span>San Francisco, CA</span>
+              <span>Pakistan</span>
             </div>
           </div>
         </div>
