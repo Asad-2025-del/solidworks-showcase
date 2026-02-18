@@ -21,17 +21,14 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
         <p className="mb-4 text-sm font-mono uppercase tracking-[0.3em] text-primary animate-fade-in">
-          Engineering · Design · Simulation
+          CAD · Simulation · CFD Analysis
         </p>
         <h1 className="mb-6 text-5xl md:text-7xl lg:text-8xl font-bold leading-tight animate-fade-in-up">
-          Precision{" "}
-          <span className="text-gradient">Engineering</span>
-          <br />
-          Solutions
+          <span className="text-gradient">DesignNCFD</span>
         </h1>
         <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-          SolidWorks design, FEA stress analysis, and CFD simulation — 
-          turning complex engineering challenges into validated, production-ready solutions.
+          CAD modeling, SolidWorks design, ANSYS structural & CFD analysis — 
+          delivering optimized engineering solutions from concept to production.
         </p>
         <div className="flex items-center justify-center gap-4 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
           <a
