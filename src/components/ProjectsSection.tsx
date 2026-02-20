@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import projects from "@/data/projects";
+import { Cog, BarChart3 } from "lucide-react";
 
 const ProjectsSection = () => {
   return (
@@ -10,40 +10,39 @@ const ProjectsSection = () => {
             Portfolio
           </p>
           <h2 className="text-4xl md:text-5xl font-bold">
-            Featured <span className="text-gradient">Projects</span>
+            Our <span className="text-gradient">Projects</span>
           </h2>
+          <p className="mt-4 mx-auto max-w-xl text-muted-foreground">
+            Explore our work across CAD design and simulation analysis.
+          </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project, i) => (
-            <Link
-              to={`/project/${project.slug}`}
-              key={project.slug}
-              className="group overflow-hidden rounded-lg border border-border bg-card transition-all duration-300 hover:border-primary/50 hover:glow-sm"
-              style={{ animationDelay: `${i * 0.15}s` }}
-            >
-              <div className="relative aspect-square overflow-hidden">
-                <img
-                  src={project.thumbnail}
-                  alt={project.title}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
-                <span className="absolute bottom-4 left-4 rounded-full bg-primary/20 px-3 py-1 text-xs font-mono text-primary backdrop-blur-sm border border-primary/30">
-                  {project.category}
-                </span>
-              </div>
-              <div className="p-6">
-                <h3 className="mb-2 text-xl font-semibold text-foreground">
-                  {project.title}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {project.description}
-                </p>
-              </div>
-            </Link>
-          ))}
+        <div className="grid gap-8 md:grid-cols-2 max-w-3xl mx-auto">
+          <Link
+            to="/cad-projects"
+            className="group relative overflow-hidden rounded-xl border border-border bg-card p-10 text-center transition-all duration-300 hover:border-primary/50 hover:glow-sm"
+          >
+            <div className="mb-6 mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 border border-primary/30 group-hover:bg-primary/20 transition-colors">
+              <Cog size={32} className="text-primary" />
+            </div>
+            <h3 className="mb-3 text-2xl font-bold text-foreground">CAD Projects</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              SolidWorks modelling, assembly design, manufacturing drawings & industrial design.
+            </p>
+          </Link>
+
+          <Link
+            to="/analysis-projects"
+            className="group relative overflow-hidden rounded-xl border border-border bg-card p-10 text-center transition-all duration-300 hover:border-primary/50 hover:glow-sm"
+          >
+            <div className="mb-6 mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 border border-primary/30 group-hover:bg-primary/20 transition-colors">
+              <BarChart3 size={32} className="text-primary" />
+            </div>
+            <h3 className="mb-3 text-2xl font-bold text-foreground">Analysis Projects</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              FEA stress analysis, CFD flow simulation, thermal studies & aerodynamic optimisation.
+            </p>
+          </Link>
         </div>
       </div>
     </section>
