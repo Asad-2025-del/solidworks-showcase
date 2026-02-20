@@ -6,10 +6,11 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   const links = [
-    { label: "Projects", href: "#projects" },
-    { label: "Services", href: "#services" },
-    { label: "About", href: "#about" },
-    { label: "Contact", href: "#contact" },
+    { label: "CAD Projects", href: "/cad-projects" },
+    { label: "Analysis Projects", href: "/analysis-projects" },
+    { label: "Services", href: "/#services" },
+    { label: "About", href: "/#about" },
+    { label: "Contact", href: "/#contact" },
   ];
 
   return (
@@ -35,7 +36,7 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="#contact"
+            href="/#contact"
             className="rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
           >
             Get in Touch

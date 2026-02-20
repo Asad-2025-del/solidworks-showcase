@@ -10,11 +10,22 @@ import liftDrawing from "@/assets/lift-drawing.png";
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
+import mixtankPathlines from "@/assets/mixtank-pathlines.jpg";
+import mixtankTemp from "@/assets/mixtank-temp.jpg";
+import airfoilPressure from "@/assets/airfoil-pressure.jpg";
+import airfoilVelocity from "@/assets/airfoil-velocity.jpg";
+import heatsinkTemp from "@/assets/heatsink-temp.jpeg";
+import heatsinkCad from "@/assets/heatsink-cad.jpeg";
+import heatsinkPressure from "@/assets/heatsink-pressure.jpeg";
+import heatsink3d from "@/assets/heatsink-3d.jpeg";
+
+export type ProjectType = "cad" | "analysis";
 
 export interface Project {
   slug: string;
   title: string;
   category: string;
+  type: ProjectType;
   description: string;
   thumbnail: string;
   images: { src: string; caption: string }[];
@@ -24,10 +35,12 @@ export interface Project {
 }
 
 const projects: Project[] = [
+  // ── CAD Projects ──
   {
     slug: "gearbox-assembly",
     title: "Gearbox Assembly Design",
     category: "SolidWorks CAD",
+    type: "cad",
     description:
       "Complete multi-stage gearbox assembly with tolerance analysis and manufacturing drawings.",
     thumbnail: project1,
@@ -52,6 +65,7 @@ const projects: Project[] = [
     slug: "bracket-assembly",
     title: "L-Bracket Assembly",
     category: "SolidWorks CAD",
+    type: "cad",
     description:
       "Precision L-bracket assembly with fastener detailing and multi-view engineering drawings.",
     thumbnail: assem1,
@@ -75,6 +89,7 @@ const projects: Project[] = [
     slug: "chair-design",
     title: "Modern Chair Design",
     category: "Industrial Design",
+    type: "cad",
     description:
       "Ergonomic modern chair concept with dual-material construction and full drawing package.",
     thumbnail: chairRender2,
@@ -99,6 +114,7 @@ const projects: Project[] = [
     slug: "lift-mechanism",
     title: "Scissor Lift Mechanism",
     category: "Mechanism Design",
+    type: "cad",
     description:
       "Hydraulic scissor lift mechanism with kinematic analysis and detailed assembly drawings.",
     thumbnail: liftRender,
@@ -119,10 +135,13 @@ const projects: Project[] = [
       "A parametric scissor-lift mechanism driven by a single hydraulic cylinder. The project covers kinematic motion study, force analysis at full extension, and a complete drawing package with BOM. Ideal for ergonomic workstation or industrial positioning applications.",
     software: ["SolidWorks 2024", "SolidWorks Motion"],
   },
+
+  // ── Analysis Projects ──
   {
     slug: "pressure-vessel-fea",
     title: "Pressure Vessel FEA",
     category: "Stress Analysis",
+    type: "analysis",
     description:
       "Finite element analysis of a high-pressure vessel with thermal-structural coupling and fatigue life prediction.",
     thumbnail: project2,
@@ -146,6 +165,7 @@ const projects: Project[] = [
     slug: "aerodynamic-cfd",
     title: "Aerodynamic CFD Study",
     category: "Flow Simulation",
+    type: "analysis",
     description:
       "Computational fluid dynamics analysis for drag reduction and thermal management optimization.",
     thumbnail: project3,
@@ -164,6 +184,81 @@ const projects: Project[] = [
       "An external aerodynamics study using CFD to quantify drag and optimise surface geometry for reduced air resistance. Includes mesh independence study, turbulence model validation, and parametric shape optimisation.",
     software: ["ANSYS Fluent", "SolidWorks Flow Simulation"],
   },
+  {
+    slug: "airfoil-cfd",
+    title: "Airfoil CFD Analysis",
+    category: "CFD Analysis",
+    type: "analysis",
+    description:
+      "Static pressure and velocity field analysis around an airfoil using ANSYS Fluent.",
+    thumbnail: airfoilPressure,
+    images: [
+      { src: airfoilPressure, caption: "Static pressure contour around airfoil" },
+      { src: airfoilVelocity, caption: "Velocity magnitude field around airfoil" },
+    ],
+    specs: [
+      { label: "Airfoil", value: "NACA series" },
+      { label: "Flow Regime", value: "Incompressible, turbulent" },
+      { label: "Analysis Type", value: "2D steady-state" },
+      { label: "Solver", value: "Pressure-based" },
+      { label: "Turbulence Model", value: "k-ω SST" },
+    ],
+    overview:
+      "A 2D CFD study of flow around an airfoil section examining static pressure distribution and velocity fields. Used to evaluate lift and drag characteristics at varying angles of attack.",
+    software: ["ANSYS Fluent 2024 R2"],
+  },
+  {
+    slug: "mixing-tank-cfd",
+    title: "Mixing Tank Thermal CFD",
+    category: "CFD Analysis",
+    type: "analysis",
+    description:
+      "Thermal-fluid simulation of a mixing tank with temperature pathlines and contour analysis.",
+    thumbnail: mixtankPathlines,
+    images: [
+      { src: mixtankPathlines, caption: "Temperature pathlines in mixing tank" },
+      { src: mixtankTemp, caption: "Static temperature contour — cross-section" },
+    ],
+    specs: [
+      { label: "Analysis Type", value: "Conjugate heat transfer" },
+      { label: "Temperature Range", value: "288 – 358 K" },
+      { label: "Flow Type", value: "Turbulent mixing" },
+      { label: "Solver", value: "Pressure-based, coupled" },
+      { label: "Visualisation", value: "Pathlines & contours" },
+    ],
+    overview:
+      "A conjugate heat transfer simulation of a mixing tank analysing temperature distribution through pathlines and contour plots. The study evaluates thermal mixing efficiency and identifies hot/cold zones within the chamber.",
+    software: ["ANSYS Fluent 2024 R2"],
+  },
+  {
+    slug: "heatsink-cfd",
+    title: "Pin-Fin Heat Sink CFD",
+    category: "Thermal Analysis",
+    type: "analysis",
+    description:
+      "Thermal and flow analysis of a pin-fin heat sink with temperature and pressure distribution.",
+    thumbnail: heatsinkTemp,
+    images: [
+      { src: heatsinkCad, caption: "3D CAD model of pin-fin heat sink" },
+      { src: heatsink3d, caption: "Isometric view — transparent enclosure" },
+      { src: heatsinkTemp, caption: "Static temperature contour — top plane" },
+      { src: heatsinkPressure, caption: "Static pressure contour — top plane" },
+    ],
+    specs: [
+      { label: "Fin Type", value: "Cylindrical pin-fin array" },
+      { label: "Array", value: "5 × 5 staggered" },
+      { label: "Temperature Range", value: "298 – 333 K" },
+      { label: "Pressure Drop", value: "~64 Pa max" },
+      { label: "Analysis Type", value: "Conjugate heat transfer + flow" },
+      { label: "Solver", value: "ANSYS Fluent, pressure-based" },
+    ],
+    overview:
+      "A comprehensive thermal-fluid analysis of a staggered pin-fin heat sink. The study covers temperature distribution, pressure drop across the fin array, and flow patterns to optimise cooling performance for electronics applications.",
+    software: ["ANSYS Fluent 2025 R2", "ANSYS SpaceClaim"],
+  },
 ];
+
+export const cadProjects = projects.filter((p) => p.type === "cad");
+export const analysisProjects = projects.filter((p) => p.type === "analysis");
 
 export default projects;
