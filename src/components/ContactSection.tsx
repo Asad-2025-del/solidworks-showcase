@@ -1,6 +1,7 @@
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, MessageCircle } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { motion } from "framer-motion";
 
 const ContactSection = () => {
   const { toast } = useToast();
@@ -26,22 +27,37 @@ const ContactSection = () => {
     toast({ title: "Opening your email client…", description: "Your message details have been pre-filled." });
   };
 
+  const whatsappNumber = "923378284111";
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hi DesignnCFD, I'd like to discuss a project.")}`;
+
   const inputClass =
     "w-full rounded-md border border-border bg-card px-4 py-3 text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors";
 
   return (
     <section id="contact" className="py-24 bg-muted/30">
       <div className="container mx-auto px-6">
-        <div className="mb-16 text-center">
+        <motion.div
+          className="mb-16 text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
+        >
           <p className="mb-2 text-sm font-mono uppercase tracking-[0.2em] text-primary">
             Get in Touch
           </p>
           <h2 className="text-4xl md:text-5xl font-bold">
             Start Your <span className="text-gradient">Project</span>
           </h2>
-        </div>
+        </motion.div>
 
-        <div className="mx-auto max-w-2xl">
+        <motion.div
+          className="mx-auto max-w-2xl"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="grid gap-6 sm:grid-cols-2">
               <input type="text" name="name" placeholder="Name *" value={form.name} onChange={handleChange} className={inputClass} required />
@@ -49,12 +65,24 @@ const ContactSection = () => {
             </div>
             <input type="text" name="subject" placeholder="Subject" value={form.subject} onChange={handleChange} className={inputClass} />
             <textarea name="message" rows={5} placeholder="Tell us about your project… *" value={form.message} onChange={handleChange} className={`${inputClass} resize-none`} required />
-            <button
-              type="submit"
-              className="w-full rounded-md bg-primary py-3 font-medium text-primary-foreground hover:bg-primary/90 transition-colors glow-sm"
-            >
-              Send Message
-            </button>
+            
+            <div className="grid gap-4 sm:grid-cols-2">
+              <button
+                type="submit"
+                className="w-full rounded-md bg-primary py-3 font-medium text-primary-foreground hover:bg-primary/90 transition-colors glow-sm"
+              >
+                Send Message
+              </button>
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 w-full rounded-md bg-[hsl(142,70%,45%)] py-3 font-medium text-[hsl(0,0%,100%)] hover:bg-[hsl(142,70%,40%)] transition-colors"
+              >
+                <MessageCircle size={20} />
+                Chat on WhatsApp
+              </a>
+            </div>
           </form>
 
           <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm text-muted-foreground">
@@ -71,7 +99,7 @@ const ContactSection = () => {
               <span>Pakistan</span>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
