@@ -26,6 +26,7 @@ export interface Project {
   title: string;
   category: string;
   type: ProjectType;
+  industry: string;
   description: string;
   thumbnail: string;
   images: { src: string; caption: string }[];
@@ -41,6 +42,7 @@ const projects: Project[] = [
     title: "Gearbox Assembly Design",
     category: "SolidWorks CAD",
     type: "cad",
+    industry: "Manufacturing",
     description:
       "Complete multi-stage gearbox assembly with tolerance analysis and manufacturing drawings.",
     thumbnail: project1,
@@ -66,6 +68,7 @@ const projects: Project[] = [
     title: "L-Bracket Assembly",
     category: "SolidWorks CAD",
     type: "cad",
+    industry: "Manufacturing",
     description:
       "Precision L-bracket assembly with fastener detailing and multi-view engineering drawings.",
     thumbnail: assem1,
@@ -90,6 +93,7 @@ const projects: Project[] = [
     title: "Modern Chair Design",
     category: "Industrial Design",
     type: "cad",
+    industry: "Consumer Products",
     description:
       "Ergonomic modern chair concept with dual-material construction and full drawing package.",
     thumbnail: chairRender2,
@@ -115,6 +119,7 @@ const projects: Project[] = [
     title: "Scissor Lift Mechanism",
     category: "Mechanism Design",
     type: "cad",
+    industry: "Industrial Equipment",
     description:
       "Hydraulic scissor lift mechanism with kinematic analysis and detailed assembly drawings.",
     thumbnail: liftRender,
@@ -142,6 +147,7 @@ const projects: Project[] = [
     title: "Pressure Vessel FEA",
     category: "Stress Analysis",
     type: "analysis",
+    industry: "Oil & Gas",
     description:
       "Finite element analysis of a high-pressure vessel with thermal-structural coupling and fatigue life prediction.",
     thumbnail: project2,
@@ -166,6 +172,7 @@ const projects: Project[] = [
     title: "Aerodynamic CFD Study",
     category: "Flow Simulation",
     type: "analysis",
+    industry: "Automotive",
     description:
       "Computational fluid dynamics analysis for drag reduction and thermal management optimization.",
     thumbnail: project3,
@@ -189,6 +196,7 @@ const projects: Project[] = [
     title: "Airfoil CFD Analysis",
     category: "CFD Analysis",
     type: "analysis",
+    industry: "Aerospace",
     description:
       "Static pressure and velocity field analysis around an airfoil using ANSYS Fluent.",
     thumbnail: airfoilPressure,
@@ -212,6 +220,7 @@ const projects: Project[] = [
     title: "Mixing Tank Thermal CFD",
     category: "CFD Analysis",
     type: "analysis",
+    industry: "HVAC",
     description:
       "Thermal-fluid simulation of a mixing tank with temperature pathlines and contour analysis.",
     thumbnail: mixtankPathlines,
@@ -235,6 +244,7 @@ const projects: Project[] = [
     title: "Pin-Fin Heat Sink CFD",
     category: "Thermal Analysis",
     type: "analysis",
+    industry: "Electronics",
     description:
       "Thermal and flow analysis of a pin-fin heat sink with temperature and pressure distribution.",
     thumbnail: heatsinkTemp,
@@ -260,5 +270,6 @@ const projects: Project[] = [
 
 export const cadProjects = projects.filter((p) => p.type === "cad");
 export const analysisProjects = projects.filter((p) => p.type === "analysis");
+export const industries = [...new Set(projects.map((p) => p.industry))].sort();
 
 export default projects;
