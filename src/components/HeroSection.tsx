@@ -1,5 +1,12 @@
 import heroBg from "@/assets/hero-bg.jpg";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, Shield, Zap, Target } from "lucide-react";
+import { motion } from "framer-motion";
+
+const badges = [
+  { icon: Shield, label: "Industry-Grade Accuracy" },
+  { icon: Zap, label: "Fast Turnaround" },
+  { icon: Target, label: "Production-Ready Output" },
+];
 
 const HeroSection = () => {
   return (
@@ -9,28 +16,72 @@ const HeroSection = () => {
         <img
           src={heroBg}
           alt="Engineering workspace with CAD models and simulation analysis"
-          className="h-full w-full object-cover opacity-40"
+          className="h-full w-full object-cover opacity-30"
           loading="eager"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background" />
       </div>
 
       {/* Grid overlay */}
-      <div className="absolute inset-0 grid-pattern opacity-30" />
+      <div className="absolute inset-0 grid-pattern opacity-20" />
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
-        <p className="mb-4 text-sm font-mono uppercase tracking-[0.3em] text-primary animate-fade-in">
-          CAD · Simulation · CFD Analysis
-        </p>
-        <h1 className="mb-6 text-5xl md:text-7xl lg:text-8xl font-bold leading-tight animate-fade-in-up">
-          <span className="text-gradient">DesignnCFD</span>
-        </h1>
-        <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-          CAD modeling, SolidWorks design, ANSYS structural & CFD analysis — 
-          delivering optimized engineering solutions from concept to production.
-        </p>
-        <div className="flex items-center justify-center gap-4 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
+        <motion.p
+          className="mb-4 text-sm font-mono uppercase tracking-[0.3em] text-primary"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          Trusted by Engineers &amp; Manufacturers
+        </motion.p>
+
+        <motion.h1
+          className="mb-6 text-5xl md:text-7xl lg:text-8xl font-bold leading-tight"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+        >
+          <span className="text-gradient">Designn</span>
+          <span className="text-foreground">CFD</span>
+        </motion.h1>
+
+        <motion.p
+          className="mx-auto mb-6 max-w-2xl text-lg md:text-xl text-muted-foreground leading-relaxed"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          Precision <strong className="text-foreground">CAD modeling</strong>, advanced{" "}
+          <strong className="text-foreground">FEA & CFD simulation</strong>, and end-to-end{" "}
+          <strong className="text-foreground">product design</strong> — engineered for
+          manufacturing, R&D, and industrial applications.
+        </motion.p>
+
+        {/* Industry trust badges */}
+        <motion.div
+          className="flex flex-wrap items-center justify-center gap-4 mb-10"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.35 }}
+        >
+          {badges.map((b) => (
+            <span
+              key={b.label}
+              className="flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-xs font-mono text-primary"
+            >
+              <b.icon size={14} />
+              {b.label}
+            </span>
+          ))}
+        </motion.div>
+
+        <motion.div
+          className="flex items-center justify-center gap-4"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
           <a
             href="#projects"
             className="rounded-md bg-primary px-8 py-3 font-medium text-primary-foreground hover:bg-primary/90 transition-colors glow-sm"
@@ -41,9 +92,9 @@ const HeroSection = () => {
             href="#contact"
             className="rounded-md border border-border px-8 py-3 font-medium text-foreground hover:bg-secondary transition-colors"
           >
-            Contact Us
+            Get a Quote
           </a>
-        </div>
+        </motion.div>
       </div>
 
       {/* Scroll indicator */}

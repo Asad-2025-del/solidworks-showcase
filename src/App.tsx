@@ -8,6 +8,7 @@ import ProjectDetail from "./pages/ProjectDetail";
 import CadProjects from "./pages/CadProjects";
 import AnalysisProjects from "./pages/AnalysisProjects";
 import NotFound from "./pages/NotFound";
+import WhatsAppFloat from "./components/WhatsAppFloat";
 
 const queryClient = new QueryClient();
 
@@ -17,6 +18,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <WhatsAppFloat />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/cad-projects" element={<CadProjects />} />
