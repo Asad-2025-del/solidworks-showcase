@@ -18,6 +18,12 @@ import heatsinkTemp from "@/assets/heatsink-temp.jpeg";
 import heatsinkCad from "@/assets/heatsink-cad.jpeg";
 import heatsinkPressure from "@/assets/heatsink-pressure.jpeg";
 import heatsink3d from "@/assets/heatsink-3d.jpeg";
+import pipelineCfd from "@/assets/pipeline-cfd.jpg";
+import turbineFea from "@/assets/turbine-fea.jpg";
+import hvacDuctCfd from "@/assets/hvac-duct-cfd.jpg";
+import subseaManifold from "@/assets/subsea-manifold.jpg";
+import wingRibCad from "@/assets/wing-rib-cad.jpg";
+import ahuCad from "@/assets/ahu-cad.jpg";
 
 export type ProjectType = "cad" | "analysis";
 
@@ -265,6 +271,156 @@ const projects: Project[] = [
     overview:
       "A comprehensive thermal-fluid analysis of a staggered pin-fin heat sink. The study covers temperature distribution, pressure drop across the fin array, and flow patterns to optimise cooling performance for electronics applications.",
     software: ["ANSYS Fluent 2025 R2", "ANSYS SpaceClaim"],
+  },
+
+  // ── Oil & Gas ──
+  {
+    slug: "pipeline-flow-cfd",
+    title: "Pipeline Junction CFD",
+    category: "Flow Simulation",
+    type: "analysis" as const,
+    industry: "Oil & Gas",
+    description:
+      "Multiphase CFD analysis of flow through a subsea pipeline junction with erosion prediction.",
+    thumbnail: pipelineCfd,
+    images: [
+      { src: pipelineCfd, caption: "Velocity contour through pipeline junction" },
+    ],
+    specs: [
+      { label: "Flow Regime", value: "Multiphase (oil-water-gas)" },
+      { label: "Pipe Diameter", value: "12\" (DN300)" },
+      { label: "Operating Pressure", value: "25 MPa" },
+      { label: "Mesh Cells", value: "~4.8 M polyhedral" },
+      { label: "Turbulence Model", value: "Realizable k-ε" },
+      { label: "Erosion Model", value: "DNV-RP-O501" },
+    ],
+    overview:
+      "A multiphase CFD study of flow through a subsea pipeline tee-junction, predicting velocity distribution, pressure drop, and erosion-prone zones. Results informed weld overlay placement and wall-thickness optimisation to extend service life.",
+    software: ["ANSYS Fluent", "ANSYS Meshing"],
+  },
+  {
+    slug: "subsea-manifold",
+    title: "Subsea Manifold Assembly",
+    category: "SolidWorks CAD",
+    type: "cad" as const,
+    industry: "Oil & Gas",
+    description:
+      "Detailed CAD model of a subsea production manifold with valve assemblies and piping.",
+    thumbnail: subseaManifold,
+    images: [
+      { src: subseaManifold, caption: "Isometric render of subsea manifold" },
+    ],
+    specs: [
+      { label: "Material", value: "Super duplex stainless steel" },
+      { label: "Design Pressure", value: "690 bar" },
+      { label: "Bore Sizes", value: "4\" – 10\"" },
+      { label: "Valves", value: "6 × gate valves, 2 × choke" },
+      { label: "Depth Rating", value: "3 000 m" },
+      { label: "Standard", value: "API 17D / ISO 13628-4" },
+    ],
+    overview:
+      "A fully detailed subsea manifold assembly modelled in SolidWorks for a deepwater production system. Includes gate valves, choke valves, hub connectors, and structural frame designed to API 17D requirements.",
+    software: ["SolidWorks 2024", "DraftSight"],
+  },
+
+  // ── Aerospace ──
+  {
+    slug: "turbine-blade-fea",
+    title: "Turbine Blade FEA",
+    category: "Stress Analysis",
+    type: "analysis" as const,
+    industry: "Aerospace",
+    description:
+      "Thermo-structural FEA of a gas turbine blade under centrifugal and thermal loading.",
+    thumbnail: turbineFea,
+    images: [
+      { src: turbineFea, caption: "Von Mises stress distribution on turbine casing" },
+    ],
+    specs: [
+      { label: "Material", value: "Inconel 718 nickel alloy" },
+      { label: "Rotational Speed", value: "12 000 RPM" },
+      { label: "Gas Temperature", value: "1 150 °C" },
+      { label: "Mesh Elements", value: "~620 000 hex-dominant" },
+      { label: "Analysis Type", value: "Coupled thermo-structural" },
+      { label: "Creep Model", value: "Norton power law" },
+    ],
+    overview:
+      "A coupled thermo-structural finite element analysis of a first-stage gas turbine blade subjected to centrifugal loading, thermal gradients, and gas-path pressure. Creep life assessment was performed using the Larson-Miller parameter.",
+    software: ["ANSYS Mechanical", "ANSYS Workbench"],
+  },
+  {
+    slug: "wing-rib-design",
+    title: "Aircraft Wing Rib Design",
+    category: "SolidWorks CAD",
+    type: "cad" as const,
+    industry: "Aerospace",
+    description:
+      "Lightweight wing rib structure with lightening holes and stiffener optimisation.",
+    thumbnail: wingRibCad,
+    images: [
+      { src: wingRibCad, caption: "Isometric view of machined wing rib" },
+    ],
+    specs: [
+      { label: "Material", value: "7075-T6 aluminium alloy" },
+      { label: "Chord Length", value: "1 200 mm" },
+      { label: "Thickness", value: "3.2 mm (web), 6 mm (flanges)" },
+      { label: "Weight Saving", value: "34 % vs solid plate" },
+      { label: "Manufacturing", value: "5-axis CNC milling" },
+      { label: "Standard", value: "EASA CS-25" },
+    ],
+    overview:
+      "A lightweight wing rib designed for a commuter aircraft, featuring topology-optimised lightening holes and integral stiffeners. The design reduces mass by 34 % while meeting EASA CS-25 static strength and fatigue requirements.",
+    software: ["SolidWorks 2024", "Altair Inspire"],
+  },
+
+  // ── HVAC ──
+  {
+    slug: "hvac-duct-cfd",
+    title: "HVAC Duct Flow CFD",
+    category: "CFD Analysis",
+    type: "analysis" as const,
+    industry: "HVAC",
+    description:
+      "Air distribution CFD study for a commercial building ductwork system with thermal comfort analysis.",
+    thumbnail: hvacDuctCfd,
+    images: [
+      { src: hvacDuctCfd, caption: "Velocity pathlines through duct network" },
+    ],
+    specs: [
+      { label: "System Type", value: "Variable Air Volume (VAV)" },
+      { label: "Supply Air", value: "5 000 CFM" },
+      { label: "Temperature Range", value: "12 – 24 °C" },
+      { label: "Mesh Cells", value: "~2.4 M polyhedral" },
+      { label: "Turbulence Model", value: "k-ε RNG" },
+      { label: "Standard", value: "ASHRAE 55 / 62.1" },
+    ],
+    overview:
+      "A CFD analysis of air distribution in a commercial HVAC duct system to evaluate flow uniformity, pressure losses, and thermal comfort. Results guided damper sizing and diffuser selection to meet ASHRAE 55 comfort criteria.",
+    software: ["ANSYS Fluent 2024 R2", "AutoCAD MEP"],
+  },
+  {
+    slug: "ahu-design",
+    title: "Air Handling Unit Design",
+    category: "SolidWorks CAD",
+    type: "cad" as const,
+    industry: "HVAC",
+    description:
+      "Complete AHU design with fan, coil, and filter sections for commercial ventilation.",
+    thumbnail: ahuCad,
+    images: [
+      { src: ahuCad, caption: "Cutaway render of air handling unit" },
+    ],
+    specs: [
+      { label: "Airflow", value: "10 000 CFM" },
+      { label: "Fan Type", value: "Backward-curved centrifugal" },
+      { label: "Coil Rows", value: "6-row chilled water" },
+      { label: "Filter", value: "MERV 13 + HEPA" },
+      { label: "Casing", value: "Double-skin insulated panels" },
+      { label: "Standard", value: "ASHRAE 90.1 / EN 1886" },
+    ],
+    overview:
+      "A fully parametric air handling unit designed in SolidWorks for a commercial building HVAC system. Includes centrifugal fan, chilled water coils, multi-stage filtration, and double-skin insulated casing with access panels.",
+    software: ["SolidWorks 2024", "HAP (Carrier)"],
   },
 ];
 
