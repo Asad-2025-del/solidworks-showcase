@@ -1,9 +1,12 @@
 import { useParams, Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import projects from "@/data/projects";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+
+const SITE = "https://mech-gallery-plus.lovable.app";
 
 const ProjectDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -24,8 +27,33 @@ const ProjectDetail = () => {
   const prevImg = () => setActiveImg((i) => (i === 0 ? project.images.length - 1 : i - 1));
   const nextImg = () => setActiveImg((i) => (i === project.images.length - 1 ? 0 : i + 1));
 
+  const url = `${SITE}/project/${project.slug}`;
+  const ogImage = project.thumbnail?.startsWith("http") ? project.thumbnail : `${SITE}${project.thumbnail}`;
+  const desc = (project.overview || project.description).slice(0, 158);
+
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>{`${project.title} — ${project.category} | DesignnCFD`}</title>
+        <meta name="description" content={desc} />
+        <link rel="canonical" href={url} />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={`${project.title} — ${project.category}`} />
+        <meta property="og:description" content={desc} />
+        <meta property="og:url" content={url} />
+        <meta property="og:image" content={ogImage} />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          name: project.title,
+          description: project.overview,
+          url,
+          image: ogImage,
+          about: project.category,
+          keywords: [project.industry, project.category, ...project.software].join(", "),
+          author: { "@type": "Person", name: "Asadullah Anis" },
+        })}</script>
+      </Helmet>
       <Navbar />
 
       <main className="pt-24 pb-16">

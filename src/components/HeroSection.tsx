@@ -44,6 +44,7 @@ const HeroSection = () => {
         >
           <span className="text-gradient">Designn</span>
           <span className="text-foreground">CFD</span>
+          <span className="sr-only"> — Professional CAD Design & Engineering Simulation</span>
         </motion.h1>
 
         <motion.p
@@ -100,6 +101,7 @@ const HeroSection = () => {
       {/* Scroll indicator */}
       <a
         href="#projects"
+        aria-label="Scroll to projects"
         className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground hover:text-primary transition-colors animate-bounce"
       >
         <ArrowDown size={24} />
