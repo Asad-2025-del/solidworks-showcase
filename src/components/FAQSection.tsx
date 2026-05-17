@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import {
   Accordion,
   AccordionContent,
@@ -40,8 +41,20 @@ const faqs = [
 ];
 
 const FAQSection = () => {
+  const faqLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: f.answer },
+    })),
+  };
   return (
     <section className="py-24 bg-background">
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(faqLd)}</script>
+      </Helmet>
       <div className="container mx-auto px-6">
         <motion.div
           className="mb-16 text-center"

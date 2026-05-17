@@ -1,5 +1,6 @@
 import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft, Filter } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -20,6 +21,21 @@ const Portfolio = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Portfolio — Engineering Projects by Industry | DesignnCFD</title>
+        <meta name="description" content="Browse CAD and simulation projects across Aerospace, Oil & Gas, HVAC, and Manufacturing. Filter by industry to find relevant engineering work." />
+        <link rel="canonical" href="https://mech-gallery-plus.lovable.app/portfolio" />
+        <meta property="og:title" content="Portfolio — Engineering Projects by Industry | DesignnCFD" />
+        <meta property="og:description" content="Browse CAD and simulation projects across Aerospace, Oil & Gas, HVAC, and Manufacturing." />
+        <meta property="og:url" content="https://mech-gallery-plus.lovable.app/portfolio" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: "DesignnCFD Portfolio",
+          description: "Engineering portfolio of CAD modeling, FEA, and CFD projects across multiple industries.",
+          url: "https://mech-gallery-plus.lovable.app/portfolio",
+        })}</script>
+      </Helmet>
       <Navbar />
 
       {/* Header */}
@@ -111,9 +127,9 @@ const Portfolio = () => {
                           {project.category}
                         </span>
                       </div>
-                      <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
+                      <h2 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
                         {project.title}
-                      </h3>
+                      </h2>
                       <p className="mt-1 text-sm text-muted-foreground line-clamp-2">
                         {project.description}
                       </p>

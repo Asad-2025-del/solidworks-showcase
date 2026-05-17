@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { analysisProjects } from "@/data/projects";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -17,6 +18,14 @@ const cardVariants = {
 const AnalysisProjects = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Analysis Projects — FEA & CFD Simulation | DesignnCFD</title>
+        <meta name="description" content="ANSYS FEA stress analysis, CFD flow simulation, thermal studies, and aerodynamic optimisation for industrial applications." />
+        <link rel="canonical" href="https://mech-gallery-plus.lovable.app/analysis-projects" />
+        <meta property="og:title" content="Analysis Projects — FEA & CFD Simulation | DesignnCFD" />
+        <meta property="og:description" content="ANSYS FEA stress analysis, CFD flow simulation, thermal studies, and aerodynamic optimisation for industrial applications." />
+        <meta property="og:url" content="https://mech-gallery-plus.lovable.app/analysis-projects" />
+      </Helmet>
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-6">
@@ -66,7 +75,7 @@ const AnalysisProjects = () => {
                     </span>
                   </div>
                   <div className="p-6">
-                    <h3 className="mb-2 text-xl font-semibold text-foreground">{project.title}</h3>
+                    <h2 className="mb-2 text-xl font-semibold text-foreground">{project.title}</h2>
                     <p className="text-sm text-muted-foreground leading-relaxed">{project.description}</p>
                   </div>
                 </Link>

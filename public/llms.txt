@@ -1,0 +1,25 @@
+# DesignnCFD
+
+> Professional CAD modeling, SolidWorks design, ANSYS FEA structural analysis, and CFD simulation services for manufacturing, R&D, aerospace, oil & gas, and HVAC industries.
+
+DesignnCFD is an engineering consultancy run by Asadullah Anis offering end-to-end product design, simulation, and optimization. We deliver production-ready CAD assemblies, manufacturing drawings, and detailed FEA/CFD reports for engineers, manufacturers, and startups worldwide.
+
+## Pages
+
+- [Home](/): Overview of services, portfolio highlights, pricing, and contact.
+- [Portfolio](/portfolio): Full project gallery filterable by industry (Aerospace, Oil & Gas, HVAC, Manufacturing).
+- [CAD Projects](/cad-projects): SolidWorks modeling, assembly design, and manufacturing drawings.
+- [Analysis Projects](/analysis-projects): FEA stress analysis, CFD flow simulation, and thermal studies.
+
+## Services
+
+- CAD Modeling & SolidWorks Design
+- ANSYS Structural FEA
+- CFD Flow & Thermal Analysis
+- Product Design & Optimization
+- Manufacturing Drawings (PDF/DXF)
+
+## Contact
+
+- Email: Designncfd@gmail.com
+- WhatsApp: +92 337 8284111
