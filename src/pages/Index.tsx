@@ -17,18 +17,22 @@ const jsonLd = {
   "@type": "ProfessionalService",
   name: "Apex Engineering Group",
   description:
-    "CAD modeling, SolidWorks design, ANSYS structural & CFD analysis, and product optimization services.",
+    "Multi-disciplinary engineering consultancy offering civil design, structural engineering, and mechanical CAD/FEA/CFD services.",
   url: "https://mech-gallery-plus.lovable.app",
   telephone: "+923378284111",
   email: "ApexEngGrp@gmail.com",
   address: { "@type": "PostalAddress", addressCountry: "PK" },
   areaServed: "Worldwide",
   serviceType: [
+    "Civil Engineering",
+    "Architectural Design",
+    "3D & 5D Architectural Visualization",
+    "Structural Engineering",
+    "Structural FEA",
+    "Mechanical Engineering",
     "CAD Modeling",
-    "SolidWorks Design",
     "ANSYS FEA",
     "CFD Analysis",
-    "Product Design",
   ],
 };
 
