@@ -65,7 +65,7 @@ const cardVariants = {
 };
 
 const PricingSection = () => {
-  const whatsappUrl = `https://wa.me/923378284111?text=${encodeURIComponent("Hi DesignnCFD, I'd like to discuss pricing.")}`;
+  const whatsappUrl = `https://wa.me/923378284111?text=${encodeURIComponent("Hi Apex Engineering Group, I'd like to discuss pricing.")}`;
 
   return (
     <section id="pricing" className="py-24 bg-muted/30">

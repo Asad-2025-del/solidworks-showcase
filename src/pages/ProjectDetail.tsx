@@ -34,7 +34,7 @@ const ProjectDetail = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>{`${project.title} — ${project.category} | DesignnCFD`}</title>
+        <title>{`${project.title} — ${project.category} | Apex Engineering Group`}</title>
         <meta name="description" content={desc} />
         <link rel="canonical" href={url} />
         <meta property="og:type" content="article" />

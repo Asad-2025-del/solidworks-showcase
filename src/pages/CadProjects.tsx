@@ -19,10 +19,10 @@ const CadProjects = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>CAD Projects — SolidWorks Modeling & Drawings | DesignnCFD</title>
+        <title>CAD Projects — SolidWorks Modeling & Drawings | Apex Engineering Group</title>
         <meta name="description" content="SolidWorks CAD modeling, assembly design, and manufacturing drawings — gearboxes, lifts, ergonomic products, and industrial concepts." />
         <link rel="canonical" href="https://mech-gallery-plus.lovable.app/cad-projects" />
-        <meta property="og:title" content="CAD Projects — SolidWorks Modeling & Drawings | DesignnCFD" />
+        <meta property="og:title" content="CAD Projects — SolidWorks Modeling & Drawings | Apex Engineering Group" />
         <meta property="og:description" content="SolidWorks CAD modeling, assembly design, and manufacturing drawings — gearboxes, lifts, ergonomic products, and industrial concepts." />
         <meta property="og:url" content="https://mech-gallery-plus.lovable.app/cad-projects" />
       </Helmet>
