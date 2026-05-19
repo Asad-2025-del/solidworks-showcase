@@ -1,23 +1,38 @@
 # Apex Engineering Group
 
-> Professional CAD modeling, SolidWorks design, ANSYS FEA structural analysis, and CFD simulation services for manufacturing, R&D, aerospace, oil & gas, and HVAC industries.
+> Multi-disciplinary engineering consultancy delivering civil, structural, and mechanical engineering services — from architectural floor plans and 5D walkthroughs to structural FEA and production-ready CAD/CFD.
 
-Apex Engineering Group is an engineering consultancy run by Asadullah Anis offering end-to-end product design, simulation, and optimization. We deliver production-ready CAD assemblies, manufacturing drawings, and detailed FEA/CFD reports for engineers, manufacturers, and startups worldwide.
+Apex Engineering Group is led by Asadullah Anis. We bring civil, structural, and mechanical engineering under one roof to serve developers, contractors, manufacturers, R&D teams, and product startups worldwide.
 
 ## Pages
 
-- [Home](/): Overview of services, portfolio highlights, pricing, and contact.
-- [Portfolio](/portfolio): Full project gallery filterable by industry (Aerospace, Oil & Gas, HVAC, Manufacturing).
-- [CAD Projects](/cad-projects): SolidWorks modeling, assembly design, and manufacturing drawings.
+- [Home](/): Overview of all three divisions, portfolio, pricing, and contact.
+- [Portfolio](/portfolio): Full project gallery across civil, structural, and mechanical disciplines.
+- [CAD Projects](/cad-projects): Mechanical CAD modeling, SolidWorks assemblies, and drawings.
 - [Analysis Projects](/analysis-projects): FEA stress analysis, CFD flow simulation, and thermal studies.
 
-## Services
+## Divisions
 
-- CAD Modeling & SolidWorks Design
-- ANSYS Structural FEA
-- CFD Flow & Thermal Analysis
-- Product Design & Optimization
-- Manufacturing Drawings (PDF/DXF)
+### Civil & Architectural
+- 2D & 3D architectural floor plans
+- Photorealistic 3D rendering & visualization
+- 5D walkthroughs & virtual site tours
+- Site planning & land development layouts
+- BOQ, quantity take-off & cost estimation
+
+### Structural Engineering
+- RCC & steel structure design
+- Foundation & footing design
+- Structural FEA (ETABS, SAP2000, ANSYS)
+- Seismic & wind load analysis
+- Retrofitting & rehabilitation studies
+
+### Mechanical Engineering
+- CAD modeling (SolidWorks, Fusion 360, Inventor)
+- Product design & DFM/DFA optimization
+- ANSYS structural & thermal FEA
+- CFD — fluid flow, heat transfer, HVAC
+- Manufacturing drawings (PDF/DXF/STEP)
 
 ## Contact
 
