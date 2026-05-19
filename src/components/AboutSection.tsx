@@ -1,18 +1,19 @@
 import { motion } from "framer-motion";
 
 const stats = [
+  { value: "3", label: "Engineering Divisions" },
   { value: "50+", label: "Projects Delivered" },
   { value: "99%", label: "Client Satisfaction" },
-  { value: "6+", label: "Core Services" },
   { value: "24h", label: "Response Time" },
 ];
 
 const industries = [
+  "Real Estate & Construction",
+  "Infrastructure & Public Works",
   "Manufacturing & Fabrication",
-  "Automotive & Motorsport",
+  "Oil, Gas & Process Plants",
   "HVAC & Thermal Systems",
-  "Oil & Gas / Process Plants",
-  "Product Development & R&D",
+  "Automotive & Aerospace",
 ];
 
 const AboutSection = () => {
