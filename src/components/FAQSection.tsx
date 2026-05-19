@@ -80,7 +80,7 @@ const FAQSection = () => {
             Frequently <span className="text-gradient">Asked Questions</span>
           </h2>
           <p className="mt-4 mx-auto max-w-xl text-muted-foreground">
-            Answers to the questions we hear most from engineering teams and procurement managers.
+            Answers to the questions we hear most from developers, contractors, and engineering teams across our three divisions.
           </p>
         </motion.div>
 
