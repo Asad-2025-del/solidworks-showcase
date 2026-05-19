@@ -20,7 +20,7 @@ const jsonLd = {
     "CAD modeling, SolidWorks design, ANSYS structural & CFD analysis, and product optimization services.",
   url: "https://mech-gallery-plus.lovable.app",
   telephone: "+923378284111",
-  email: "Designncfd@gmail.com",
+  email: "ApexEngGrp@gmail.com",
   address: { "@type": "PostalAddress", addressCountry: "PK" },
   areaServed: "Worldwide",
   serviceType: [
