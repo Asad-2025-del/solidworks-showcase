@@ -33,7 +33,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Trusted by Engineers &amp; Manufacturers
+          A Multi-Disciplinary Engineering Group
         </motion.p>
 
         <motion.h1
@@ -42,10 +42,9 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          <span className="text-gradient">Apex Engineering</span>
-          <span className="text-foreground"> Group</span>
-          <span className="sr-only"> — Professional CAD Design & Engineering Simulation</span>
-
+          <span className="text-gradient">Civil. Structural.</span>
+          <span className="text-foreground"> Mechanical.</span>
+          <span className="sr-only"> — Apex Engineering Group</span>
         </motion.h1>
 
         <motion.p
@@ -54,10 +53,11 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Precision <strong className="text-foreground">CAD modeling</strong>, advanced{" "}
-          <strong className="text-foreground">FEA & CFD simulation</strong>, and end-to-end{" "}
-          <strong className="text-foreground">product design</strong> — engineered for
-          manufacturing, R&D, and industrial applications.
+          End-to-end engineering for the built environment and industry — from{" "}
+          <strong className="text-foreground">architectural floor plans</strong>,{" "}
+          <strong className="text-foreground">3D &amp; 5D walkthroughs</strong>, and{" "}
+          <strong className="text-foreground">structural design</strong> to{" "}
+          <strong className="text-foreground">FEA, CFD, and production-ready CAD</strong>.
         </motion.p>
 
         {/* Industry trust badges */}
