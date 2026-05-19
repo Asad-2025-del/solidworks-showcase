@@ -42,9 +42,10 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          <span className="text-gradient">Designn</span>
-          <span className="text-foreground">CFD</span>
+          <span className="text-gradient">Apex Engineering</span>
+          <span className="text-foreground"> Group</span>
           <span className="sr-only"> — Professional CAD Design & Engineering Simulation</span>
+
         </motion.h1>
 
         <motion.p
