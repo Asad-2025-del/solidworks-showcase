@@ -16,9 +16,9 @@ const steps = [
   },
   {
     icon: Cog,
-    title: "Design & Analysis",
+    title: "Design & Engineering",
     description:
-      "Our engineers execute the CAD modeling, simulation, or CFD analysis with regular progress updates at every milestone.",
+      "Our civil, structural, or mechanical team executes the design, drawings, and analysis — with regular progress reviews at every milestone.",
   },
   {
     icon: Send,
