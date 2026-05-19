@@ -44,9 +44,9 @@ const ContactSection = () => {
           </a>
 
           <div className="mt-10 flex flex-wrap justify-center gap-8 text-sm text-muted-foreground">
-            <a href="mailto:Designncfd@gmail.com" className="flex items-center gap-2 hover:text-primary transition-colors">
+            <a href="mailto:ApexEngGrp@gmail.com" className="flex items-center gap-2 hover:text-primary transition-colors">
               <Mail size={16} className="text-primary" />
-              <span>Designncfd@gmail.com</span>
+              <span>ApexEngGrp@gmail.com</span>
             </a>
             <a href="tel:+923378284111" className="flex items-center gap-2 hover:text-primary transition-colors">
               <Phone size={16} className="text-primary" />
