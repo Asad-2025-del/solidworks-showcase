@@ -3,24 +3,24 @@ import { Quote, Star, TrendingUp, Clock, DollarSign } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Ahmed R.",
-    role: "Plant Manager — Manufacturing",
+    name: "Bilal H.",
+    role: "Developer — Residential Project",
     quote:
-      "Apex Engineering Group redesigned our heat exchanger assembly and validated it with CFD. We cut prototype iterations from 5 to 2 and saved three weeks of development time.",
+      "The 3D renderings and 5D walkthrough Apex produced helped us pre-sell units before breaking ground. The floor plans were clean, code-compliant, and contractor-ready.",
     stars: 5,
   },
   {
     name: "Sara K.",
-    role: "Lead Engineer — HVAC Systems",
+    role: "Structural Lead — Commercial Build",
     quote:
-      "Their thermal simulation work on our duct system was spot-on. Post-installation measurements matched the CFD predictions within 4%. Truly production-grade analysis.",
+      "Their seismic analysis and RCC detailing came back fully verified against local building codes. Drawings were exactly what our site team needed — zero ambiguity.",
     stars: 5,
   },
   {
-    name: "Omar F.",
-    role: "Founder — Automotive Startup",
+    name: "Ahmed R.",
+    role: "Plant Manager — Manufacturing",
     quote:
-      "From initial CAD concept to FEA-validated chassis brackets — delivered in under two weeks. The DFM review alone saved us thousands in tooling costs.",
+      "Apex redesigned our heat exchanger assembly and validated it with CFD. We cut prototype iterations from 5 to 2 and saved three weeks of development time.",
     stars: 5,
   },
 ];
@@ -30,13 +30,13 @@ const caseStudies = [
     icon: TrendingUp,
     metric: "38%",
     label: "Drag Reduction",
-    detail: "Airfoil redesign for an industrial ventilation unit",
+    detail: "CFD-optimized airfoil for an industrial ventilation unit",
   },
   {
     icon: Clock,
     metric: "60%",
-    label: "Faster Prototyping",
-    detail: "Parametric CAD models eliminated manual rework cycles",
+    label: "Faster Delivery",
+    detail: "Parametric CAD & BIM templates removed manual rework",
   },
   {
     icon: DollarSign,
