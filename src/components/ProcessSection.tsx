@@ -28,9 +28,9 @@ const steps = [
   },
   {
     icon: CheckCircle,
-    title: "Delivery & Support",
+    title: "Delivery & Handover",
     description:
-      "Final deliverables — native CAD files, reports, and drawings — are handed off. We remain available for follow-up questions.",
+      "Final deliverables — drawings, BOQs, reports, native CAD/BIM files — are handed off with documentation. We remain on-call for follow-up support.",
   },
 ];
 
