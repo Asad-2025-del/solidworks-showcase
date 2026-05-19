@@ -10,7 +10,7 @@ const Footer = () => {
             </span>
           </a>
           <p className="text-xs text-muted-foreground text-center">
-            Precision engineering for manufacturing, R&D, and industrial applications.
+            Civil · Structural · Mechanical — integrated engineering for construction and industry.
           </p>
           <p className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} Apex Engineering Group

@@ -16,9 +16,9 @@ const steps = [
   },
   {
     icon: Cog,
-    title: "Design & Analysis",
+    title: "Design & Engineering",
     description:
-      "Our engineers execute the CAD modeling, simulation, or CFD analysis with regular progress updates at every milestone.",
+      "Our civil, structural, or mechanical team executes the design, drawings, and analysis — with regular progress reviews at every milestone.",
   },
   {
     icon: Send,
@@ -28,9 +28,9 @@ const steps = [
   },
   {
     icon: CheckCircle,
-    title: "Delivery & Support",
+    title: "Delivery & Handover",
     description:
-      "Final deliverables — native CAD files, reports, and drawings — are handed off. We remain available for follow-up questions.",
+      "Final deliverables — drawings, BOQs, reports, native CAD/BIM files — are handed off with documentation. We remain on-call for follow-up support.",
   },
 ];
 

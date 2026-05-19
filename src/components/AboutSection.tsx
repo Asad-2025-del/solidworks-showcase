@@ -1,18 +1,19 @@
 import { motion } from "framer-motion";
 
 const stats = [
+  { value: "3", label: "Engineering Divisions" },
   { value: "50+", label: "Projects Delivered" },
   { value: "99%", label: "Client Satisfaction" },
-  { value: "6+", label: "Core Services" },
   { value: "24h", label: "Response Time" },
 ];
 
 const industries = [
+  "Real Estate & Construction",
+  "Infrastructure & Public Works",
   "Manufacturing & Fabrication",
-  "Automotive & Motorsport",
+  "Oil, Gas & Process Plants",
   "HVAC & Thermal Systems",
-  "Oil & Gas / Process Plants",
-  "Product Development & R&D",
+  "Automotive & Aerospace",
 ];
 
 const AboutSection = () => {
@@ -30,21 +31,25 @@ const AboutSection = () => {
               About Us
             </p>
             <h2 className="mb-6 text-4xl md:text-5xl font-bold">
-              Engineering <span className="text-gradient">Excellence</span>
+              An Integrated <span className="text-gradient">Engineering Group</span>
             </h2>
             <p className="mb-4 text-muted-foreground leading-relaxed">
-              <strong className="text-foreground">Apex Engineering Group</strong> is founded by{" "}
-              <strong className="text-foreground">Asadullah Anis</strong>, a Mechanical Engineer
-              specializing in CAD modeling, SolidWorks design & simulation, ANSYS structural & CFD
-              analysis, and product design optimization.
+              <strong className="text-foreground">Apex Engineering Group</strong> is a
+              multi-disciplinary consultancy bringing together{" "}
+              <strong className="text-foreground">civil</strong>,{" "}
+              <strong className="text-foreground">structural</strong>, and{" "}
+              <strong className="text-foreground">mechanical</strong> engineering under
+              one team. Led by <strong className="text-foreground">Asadullah Anis</strong>,
+              we collaborate with architects, contractors, manufacturers, and product
+              teams to deliver coordinated, code-compliant solutions.
             </p>
             <p className="mb-6 text-muted-foreground leading-relaxed">
-              We partner with <strong className="text-foreground">manufacturing plants</strong>,{" "}
-              <strong className="text-foreground">R&D teams</strong>,{" "}
-              <strong className="text-foreground">startups</strong>, and{" "}
-              <strong className="text-foreground">engineering students</strong> — delivering
-              production-ready, rigorously validated solutions that reduce costs and accelerate
-              time-to-market.
+              From <strong className="text-foreground">architectural floor plans</strong>{" "}
+              and <strong className="text-foreground">5D walkthroughs</strong> to{" "}
+              <strong className="text-foreground">structural FEA</strong> and{" "}
+              <strong className="text-foreground">production CAD</strong> — every
+              deliverable is rigorously validated, professionally documented, and ready
+              for construction or manufacturing.
             </p>
 
             <p className="mb-4 text-xs font-mono uppercase tracking-wider text-primary">
