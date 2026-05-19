@@ -33,7 +33,7 @@ const AboutSection = () => {
               Engineering <span className="text-gradient">Excellence</span>
             </h2>
             <p className="mb-4 text-muted-foreground leading-relaxed">
-              <strong className="text-foreground">DesignnCFD</strong> is founded by{" "}
+              <strong className="text-foreground">Apex Engineering Group</strong> is founded by{" "}
               <strong className="text-foreground">Asadullah Anis</strong>, a Mechanical Engineer
               specializing in CAD modeling, SolidWorks design & simulation, ANSYS structural & CFD
               analysis, and product design optimization.

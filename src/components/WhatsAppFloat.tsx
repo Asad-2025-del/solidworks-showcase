@@ -2,7 +2,7 @@ import { MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
 const WhatsAppFloat = () => {
-  const whatsappUrl = `https://wa.me/923378284111?text=${encodeURIComponent("Hi DesignnCFD, I'd like to discuss a project.")}`;
+  const whatsappUrl = `https://wa.me/923378284111?text=${encodeURIComponent("Hi Apex Engineering Group, I'd like to discuss a project.")}`;
 
   return (
     <motion.a

@@ -6,7 +6,7 @@ const testimonials = [
     name: "Ahmed R.",
     role: "Plant Manager — Manufacturing",
     quote:
-      "DesignnCFD redesigned our heat exchanger assembly and validated it with CFD. We cut prototype iterations from 5 to 2 and saved three weeks of development time.",
+      "Apex Engineering Group redesigned our heat exchanger assembly and validated it with CFD. We cut prototype iterations from 5 to 2 and saved three weeks of development time.",
     stars: 5,
   },
   {

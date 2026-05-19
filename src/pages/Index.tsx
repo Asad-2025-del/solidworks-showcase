@@ -15,7 +15,7 @@ import Footer from "@/components/Footer";
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "DesignnCFD",
+  name: "Apex Engineering Group",
   description:
     "CAD modeling, SolidWorks design, ANSYS structural & CFD analysis, and product optimization services.",
   url: "https://mech-gallery-plus.lovable.app",

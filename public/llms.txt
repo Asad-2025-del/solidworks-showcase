@@ -1,8 +1,8 @@
-# DesignnCFD
+# Apex Engineering Group
 
 > Professional CAD modeling, SolidWorks design, ANSYS FEA structural analysis, and CFD simulation services for manufacturing, R&D, aerospace, oil & gas, and HVAC industries.
 
-DesignnCFD is an engineering consultancy run by Asadullah Anis offering end-to-end product design, simulation, and optimization. We deliver production-ready CAD assemblies, manufacturing drawings, and detailed FEA/CFD reports for engineers, manufacturers, and startups worldwide.
+Apex Engineering Group is an engineering consultancy run by Asadullah Anis offering end-to-end product design, simulation, and optimization. We deliver production-ready CAD assemblies, manufacturing drawings, and detailed FEA/CFD reports for engineers, manufacturers, and startups worldwide.
 
 ## Pages
 
