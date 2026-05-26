@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Cog, BarChart3 } from "lucide-react";
+import { Cog, BarChart3, Building2 } from "lucide-react";
 import { motion } from "framer-motion";
 
 const cardVariants = {
@@ -29,23 +29,29 @@ const ProjectsSection = () => {
             Our <span className="text-gradient">Projects</span>
           </h2>
           <p className="mt-4 mx-auto max-w-xl text-muted-foreground">
-            Explore our work across CAD design and simulation analysis.
+            Explore our work across architecture, CAD design, and engineering simulation.
           </p>
         </motion.div>
 
-        <div className="grid gap-8 md:grid-cols-2 max-w-3xl mx-auto">
+        <div className="grid gap-8 md:grid-cols-3 max-w-5xl mx-auto">
           {[
+            {
+              to: "/architecture-projects",
+              icon: Building2,
+              title: "Architecture & Interior",
+              desc: "Revit BIM, 2D/3D plans, photo-realistic exterior and interior renderings.",
+            },
             {
               to: "/cad-projects",
               icon: Cog,
               title: "CAD Projects",
-              desc: "SolidWorks modelling, assembly design, manufacturing drawings & industrial design.",
+              desc: "SolidWorks modelling, assembly design, and industrial product design.",
             },
             {
               to: "/analysis-projects",
               icon: BarChart3,
-              title: "Analysis Projects",
-              desc: "FEA stress analysis, CFD flow simulation, thermal studies & aerodynamic optimisation.",
+              title: "Analysis & CFD",
+              desc: "ANSYS Fluent CFD, FEA stress, thermal and aerodynamic studies.",
             },
           ].map((card, i) => (
             <motion.div
@@ -58,7 +64,7 @@ const ProjectsSection = () => {
             >
               <Link
                 to={card.to}
-                className="group relative block overflow-hidden rounded-xl border border-border bg-card p-10 text-center transition-all duration-300 hover:border-primary/50 hover:glow-sm"
+                className="group relative block h-full overflow-hidden rounded-xl border border-border bg-card p-10 text-center transition-all duration-300 hover:border-primary/50 hover:glow-sm"
               >
                 <motion.div
                   className="mb-6 mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 border border-primary/30 group-hover:bg-primary/20 transition-colors"

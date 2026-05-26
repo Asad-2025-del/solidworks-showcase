@@ -7,10 +7,10 @@ const Navbar = () => {
 
   const links = [
     { label: "Portfolio", href: "/portfolio" },
-    { label: "CAD Projects", href: "/cad-projects" },
-    { label: "Analysis Projects", href: "/analysis-projects" },
+    { label: "Architecture", href: "/architecture-projects" },
+    { label: "CAD", href: "/cad-projects" },
+    { label: "CFD & Analysis", href: "/analysis-projects" },
     { label: "Services", href: "/#services" },
-    { label: "About", href: "/#about" },
     { label: "Pricing", href: "/#pricing" },
     { label: "Contact", href: "/#contact" },
   ];
