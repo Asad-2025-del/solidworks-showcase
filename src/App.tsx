@@ -11,6 +11,7 @@ import ArchitectureProjects from "./pages/ArchitectureProjects";
 import Portfolio from "./pages/Portfolio";
 import NotFound from "./pages/NotFound";
 import WhatsAppFloat from "./components/WhatsAppFloat";
+import { ChatWidget } from "./components/ChatWidget";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <WhatsAppFloat />
+        <ChatWidget />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/cad-projects" element={<CadProjects />} />
