@@ -1,31 +1,48 @@
-import assem1 from "@/assets/assem1.png";
-import assem1Drawing from "@/assets/assem1-drawing.png";
-import chairRender1 from "@/assets/chair-render1.png";
-import chairRender2 from "@/assets/chair-render2.png";
-import chairDrawing from "@/assets/chair-drawing.png";
-import gearboxRender from "@/assets/gearbox-render.jpg";
-import gearboxDrawing from "@/assets/gearbox-drawing.jpg";
-import liftRender from "@/assets/lift-render.png";
-import liftDrawing from "@/assets/lift-drawing.png";
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
-import mixtankPathlines from "@/assets/mixtank-pathlines.jpg";
-import mixtankTemp from "@/assets/mixtank-temp.jpg";
-import airfoilPressure from "@/assets/airfoil-pressure.jpg";
-import airfoilVelocity from "@/assets/airfoil-velocity.jpg";
-import heatsinkTemp from "@/assets/heatsink-temp.jpeg";
-import heatsinkCad from "@/assets/heatsink-cad.jpeg";
-import heatsinkPressure from "@/assets/heatsink-pressure.jpeg";
-import heatsink3d from "@/assets/heatsink-3d.jpeg";
-import pipelineCfd from "@/assets/pipeline-cfd.jpg";
-import turbineFea from "@/assets/turbine-fea.jpg";
-import hvacDuctCfd from "@/assets/hvac-duct-cfd.jpg";
-import subseaManifold from "@/assets/subsea-manifold.jpg";
-import wingRibCad from "@/assets/wing-rib-cad.jpg";
-import ahuCad from "@/assets/ahu-cad.jpg";
+// ── CAD / Design portfolio images
+import quenchingCad from "@/assets/apex/quenching-cad.jpg";
+import finnedTubeCad from "@/assets/apex/finned-tube-cad.jpg";
+import f1WingIso from "@/assets/apex/f1-wing-iso.jpg";
+import f1WingTop from "@/assets/apex/f1-wing-top.jpg";
+import f1WingFront from "@/assets/apex/f1-wing-front.jpg";
+import f1WingSide from "@/assets/apex/f1-wing-side.jpg";
+import batteryStraight from "@/assets/apex/battery-straight.jpg";
+import batteryZtype from "@/assets/apex/battery-ztype.jpg";
+import aircraftWingCad from "@/assets/apex/aircraft-wing-cad.jpg";
 
-export type ProjectType = "cad" | "analysis";
+// ── CFD / Analysis portfolio images
+import quenchingPressure from "@/assets/apex/quenching-pressure.jpg";
+import quenchingTemp from "@/assets/apex/quenching-temp.jpg";
+import finnedTubeTemp from "@/assets/apex/finned-tube-temp.jpg";
+import f1VelocityContour from "@/assets/apex/f1-velocity-contour.jpg";
+import f1Streamlines from "@/assets/apex/f1-streamlines.jpg";
+import batteryMesh from "@/assets/apex/battery-mesh.jpg";
+import batteryTemp from "@/assets/apex/battery-temp.png";
+import batteryVelocity from "@/assets/apex/battery-velocity.jpg";
+import wingMesh from "@/assets/apex/wing-mesh.jpg";
+import wingPressure from "@/assets/apex/wing-pressure.jpg";
+import wingVelocity from "@/assets/apex/wing-velocity.jpg";
+import wingVectors from "@/assets/apex/wing-vectors.jpg";
+
+// ── Architecture & Interior images
+import archPlan1 from "@/assets/apex/arch-plan-1.jpg";
+import archPlan2 from "@/assets/apex/arch-plan-2.jpg";
+import archExt1 from "@/assets/apex/arch-ext-1.jpg";
+import archExt2 from "@/assets/apex/arch-ext-2.jpg";
+import archExt3 from "@/assets/apex/arch-ext-3.jpg";
+import archExt4 from "@/assets/apex/arch-ext-4.jpg";
+import archInt1 from "@/assets/apex/arch-int-1.jpg";
+import archInt2 from "@/assets/apex/arch-int-2.jpg";
+import archInt3 from "@/assets/apex/arch-int-3.jpg";
+import archInt4 from "@/assets/apex/arch-int-4.jpg";
+import archInt5 from "@/assets/apex/arch-int-5.jpg";
+import archInt6 from "@/assets/apex/arch-int-6.jpg";
+import archInt7 from "@/assets/apex/arch-int-7.jpg";
+import arch3d1 from "@/assets/apex/arch-3d-1.jpg";
+import arch3d2 from "@/assets/apex/arch-3d-2.jpg";
+import archRender1 from "@/assets/apex/arch-render-1.jpg";
+import archRender2 from "@/assets/apex/arch-render-2.jpg";
+
+export type ProjectType = "cad" | "analysis" | "architecture";
 
 export interface Project {
   slug: string;
@@ -42,390 +59,350 @@ export interface Project {
 }
 
 const projects: Project[] = [
-  // ── CAD Projects ──
+  // ─────────────────────────────────────────────────────────────
+  //  CAD / DESIGN PROJECTS
+  // ─────────────────────────────────────────────────────────────
   {
-    slug: "gearbox-assembly",
-    title: "Gearbox Assembly Design",
+    slug: "quenching-chamber-cad",
+    title: "Quenching Chamber Design",
     category: "SolidWorks CAD",
     type: "cad",
-    industry: "Manufacturing",
+    industry: "Polymer Processing",
     description:
-      "Complete multi-stage gearbox assembly with tolerance analysis and manufacturing drawings.",
-    thumbnail: project1,
-    images: [
-      { src: gearboxRender, caption: "Isometric render of multi-stage gearbox" },
-      { src: gearboxDrawing, caption: "Engineering drawing — A4 sheet with section views" },
-    ],
+      "3D modelling and design refinement of an industrial quenching chamber for uniform cooling.",
+    thumbnail: quenchingCad,
+    images: [{ src: quenchingCad, caption: "Quenching chamber 3D geometry" }],
     specs: [
-      { label: "Gear Stages", value: "3-stage spur gear train" },
-      { label: "Material", value: "AISI 4140 steel (gears), 6061-T6 aluminium (housing)" },
-      { label: "Input Speed", value: "1450 RPM" },
-      { label: "Output Torque", value: "320 N·m" },
-      { label: "Gear Module", value: "2.5 mm" },
-      { label: "Tolerances", value: "ISO 2768-mK" },
-      { label: "Scale", value: "1:2" },
+      { label: "Industry", value: "Polymer Processing" },
+      { label: "Software", value: "SolidWorks" },
+      { label: "Focus", value: "Internal geometry optimisation" },
+      { label: "Outcome", value: "Improved cooling uniformity & efficiency" },
     ],
     overview:
-      "A fully parametric multi-stage gearbox designed in SolidWorks featuring three spur-gear stages enclosed in a split aluminium housing. The project includes detailed manufacturing drawings with GD&T callouts, BOM, and tolerance stack-up analysis to ensure reliable assembly.",
-    software: ["SolidWorks 2024", "SolidWorks Simulation", "DraftSight"],
+      "The client experienced inconsistent cooling within a quenching chamber, leading to uneven product quality. We delivered a SolidWorks 3D model with refined internal geometry, improved flow paths, and a structural layout tuned for uniform performance and consistent product output.",
+    software: ["SolidWorks"],
   },
   {
-    slug: "bracket-assembly",
-    title: "L-Bracket Assembly",
+    slug: "finned-tube-heat-exchanger-cad",
+    title: "Finned Tube Heat Exchanger",
     category: "SolidWorks CAD",
     type: "cad",
-    industry: "Manufacturing",
+    industry: "HVAC",
     description:
-      "Precision L-bracket assembly with fastener detailing and multi-view engineering drawings.",
-    thumbnail: assem1,
-    images: [
-      { src: assem1, caption: "3D render of L-bracket with hex bolt" },
-      { src: assem1Drawing, caption: "A3 engineering drawing with orthographic projections" },
-    ],
+      "Detailed 3D CAD design of a finned tube heat exchanger with optimised tube routing and fin layout.",
+    thumbnail: finnedTubeCad,
+    images: [{ src: finnedTubeCad, caption: "Finned tube heat exchanger assembly" }],
     specs: [
-      { label: "Bracket Material", value: "AISI 304 stainless steel" },
-      { label: "Thickness", value: "5 mm" },
-      { label: "Fastener", value: "M8 × 16 hex cap screw" },
-      { label: "Surface Finish", value: "Ra 1.6 µm" },
-      { label: "Sheet Size", value: "A3" },
-      { label: "Tolerances", value: "ISO 2768-mK" },
+      { label: "Industry", value: "HVAC / Heat Transfer" },
+      { label: "Software", value: "SolidWorks" },
+      { label: "Assembly", value: "Full coil + fin array" },
+      { label: "Focus", value: "Manufacturable, industry-ready geometry" },
     ],
     overview:
-      "A precision stainless-steel L-bracket assembly modelled in SolidWorks. Includes fully constrained mates, exploded views, and a complete A3 drawing package with orthographic projections and isometric detail.",
-    software: ["SolidWorks 2024"],
+      "A precise SolidWorks model of a finned tube heat exchanger used in thermal management systems. The assembly studies fin arrangement, tube routing, and compact coil layout to improve heat transfer efficiency and manufacturability.",
+    software: ["SolidWorks"],
   },
   {
-    slug: "chair-design",
-    title: "Modern Chair Design",
-    category: "Industrial Design",
+    slug: "f1-front-wing-cad",
+    title: "Formula 1 Front Wing — CAD",
+    category: "Motorsport Design",
     type: "cad",
-    industry: "Consumer Products",
+    industry: "Automotive Aerodynamics",
     description:
-      "Ergonomic modern chair concept with dual-material construction and full drawing package.",
-    thumbnail: chairRender2,
+      "Multi-element F1 front wing modelled in SolidWorks with variable flap angles and slot gaps.",
+    thumbnail: f1WingIso,
     images: [
-      { src: chairRender2, caption: "Isometric render — rear view" },
-      { src: chairRender1, caption: "Side profile render" },
-      { src: chairDrawing, caption: "A4 engineering drawing with multiple views" },
+      { src: f1WingIso, caption: "Isometric view — multi-element front wing" },
+      { src: f1WingTop, caption: "Top view of wing geometry" },
+      { src: f1WingFront, caption: "Front view — main plane, flaps & endplates" },
+      { src: f1WingSide, caption: "Side view — element profiles" },
     ],
     specs: [
-      { label: "Frame Material", value: "Die-cast aluminium alloy" },
-      { label: "Seat Material", value: "Injection-moulded beech wood composite" },
-      { label: "Seat Height", value: "450 mm" },
-      { label: "Overall Height", value: "820 mm" },
-      { label: "Weight", value: "~4.2 kg" },
-      { label: "Load Rating", value: "120 kg" },
+      { label: "Industry", value: "Automotive Aerodynamics / Motorsport" },
+      { label: "Software", value: "SolidWorks" },
+      { label: "Configurations", value: "Multiple flap angles + slot gaps" },
+      { label: "Focus", value: "Aerodynamic geometry exploration" },
     ],
     overview:
-      "A contemporary chair concept combining a sculptural aluminium frame with warm beech-wood composite seating. Designed for manufacturability using die-casting and injection moulding processes, with a full multi-view drawing sheet for production hand-off.",
-    software: ["SolidWorks 2024", "KeyShot"],
+      "A multi-element Formula 1 front wing developed in SolidWorks. The study explores flap angle and slot gap variations to evaluate aerodynamic interaction and design efficiency, providing a strong CAD foundation for downstream CFD analysis.",
+    software: ["SolidWorks"],
   },
   {
-    slug: "lift-mechanism",
-    title: "Scissor Lift Mechanism",
-    category: "Mechanism Design",
+    slug: "battery-pack-cad",
+    title: "Li-ion Battery Pack — Cooling Architecture",
+    category: "Thermal System Design",
     type: "cad",
-    industry: "Industrial Equipment",
+    industry: "Energy Storage",
     description:
-      "Hydraulic scissor lift mechanism with kinematic analysis and detailed assembly drawings.",
-    thumbnail: liftRender,
+      "Straight-type and Z-type airflow configurations with 1 mm, 2 mm, and 3 mm cell spacing variations.",
+    thumbnail: batteryStraight,
     images: [
-      { src: liftRender, caption: "Isometric render of lift in raised position" },
-      { src: liftDrawing, caption: "A4 engineering drawing with exploded view" },
+      { src: batteryStraight, caption: "Straight-type airflow battery pack" },
+      { src: batteryZtype, caption: "Z-type airflow battery pack" },
     ],
     specs: [
-      { label: "Lift Type", value: "Single-stage scissor" },
-      { label: "Platform Size", value: "600 × 500 mm" },
-      { label: "Stroke", value: "250 mm" },
-      { label: "Actuator", value: "Hydraulic cylinder, 20 mm bore" },
-      { label: "Material", value: "Mild steel arms, MDF platforms" },
-      { label: "Load Capacity", value: "200 kg" },
-      { label: "Scale", value: "1:2" },
+      { label: "Industry", value: "Energy Storage / EV" },
+      { label: "Software", value: "SolidWorks" },
+      { label: "Airflow Layouts", value: "Straight-type, Z-type" },
+      { label: "Cell Spacing", value: "1 mm, 2 mm, 3 mm" },
+      { label: "Outcome", value: "Optimised thermal & airflow design" },
     ],
     overview:
-      "A parametric scissor-lift mechanism driven by a single hydraulic cylinder. The project covers kinematic motion study, force analysis at full extension, and a complete drawing package with BOM. Ideal for ergonomic workstation or industrial positioning applications.",
-    software: ["SolidWorks 2024", "SolidWorks Motion"],
+      "3D modelling of cylindrical Li-ion battery packs studying cell spacing and airflow layouts. The design evaluates straight-type vs Z-type configurations and three spacing variants to deliver a thermally balanced, hotspot-resistant module.",
+    software: ["SolidWorks"],
+  },
+  {
+    slug: "aircraft-wing-cad",
+    title: "Aerodynamic Aircraft Wing & Rib",
+    category: "Aerospace CAD",
+    type: "cad",
+    industry: "Aerospace",
+    description:
+      "Lightweight aircraft wing with airfoil-accurate skin and internal rib structure ready for CFD/FEA.",
+    thumbnail: aircraftWingCad,
+    images: [{ src: aircraftWingCad, caption: "3D CAD model of aircraft wing & airfoil profile" }],
+    specs: [
+      { label: "Industry", value: "Aerospace" },
+      { label: "Software", value: "SolidWorks" },
+      { label: "Features", value: "Airfoil skin, internal ribs, mounting tabs" },
+      { label: "Readiness", value: "CFD & FEA-ready" },
+    ],
+    overview:
+      "Advanced SolidWorks modelling of an aircraft wing with airfoil-accurate aerodynamic skin and internal rib structure. Built with aerospace lightweighting principles and clean geometry for downstream CFD or structural analysis.",
+    software: ["SolidWorks"],
   },
 
-  // ── Analysis Projects ──
+  // ─────────────────────────────────────────────────────────────
+  //  CFD / ANALYSIS PROJECTS
+  // ─────────────────────────────────────────────────────────────
   {
-    slug: "pressure-vessel-fea",
-    title: "Pressure Vessel FEA",
-    category: "Stress Analysis",
-    type: "analysis",
-    industry: "Oil & Gas",
-    description:
-      "Finite element analysis of a high-pressure vessel with thermal-structural coupling and fatigue life prediction.",
-    thumbnail: project2,
-    images: [
-      { src: project2, caption: "Von Mises stress distribution" },
-    ],
-    specs: [
-      { label: "Vessel Type", value: "Cylindrical, hemispherical heads" },
-      { label: "Design Pressure", value: "15 MPa" },
-      { label: "Material", value: "SA-516 Gr. 70 carbon steel" },
-      { label: "Wall Thickness", value: "28 mm" },
-      { label: "Temperature Range", value: "20 – 350 °C" },
-      { label: "Mesh Elements", value: "~450 000 tetrahedral" },
-      { label: "Code", value: "ASME BPVC Section VIII, Div. 2" },
-    ],
-    overview:
-      "A comprehensive finite element study of a cylindrical pressure vessel operating under combined internal pressure and thermal loads. Includes stress linearisation per ASME BPVC, fatigue life estimation, and nozzle reinforcement evaluation.",
-    software: ["ANSYS Mechanical", "SolidWorks"],
-  },
-  {
-    slug: "aerodynamic-cfd",
-    title: "Aerodynamic CFD Study",
-    category: "Flow Simulation",
-    type: "analysis",
-    industry: "Automotive",
-    description:
-      "Computational fluid dynamics analysis for drag reduction and thermal management optimization.",
-    thumbnail: project3,
-    images: [
-      { src: project3, caption: "Velocity streamlines over body" },
-    ],
-    specs: [
-      { label: "Flow Regime", value: "Incompressible, turbulent (k-ω SST)" },
-      { label: "Inlet Velocity", value: "30 m/s" },
-      { label: "Reynolds Number", value: "~2.1 × 10⁶" },
-      { label: "Mesh Cells", value: "~3.2 M polyhedral" },
-      { label: "Cd Reduction", value: "12 % vs baseline" },
-      { label: "Solver", value: "Pressure-based, SIMPLE" },
-    ],
-    overview:
-      "An external aerodynamics study using CFD to quantify drag and optimise surface geometry for reduced air resistance. Includes mesh independence study, turbulence model validation, and parametric shape optimisation.",
-    software: ["ANSYS Fluent", "SolidWorks Flow Simulation"],
-  },
-  {
-    slug: "airfoil-cfd",
-    title: "Airfoil CFD Analysis",
+    slug: "quenching-chamber-cfd",
+    title: "Quenching Chamber CFD",
     category: "CFD Analysis",
+    type: "analysis",
+    industry: "Polymer Processing",
+    description:
+      "Airflow and thermal CFD of an industrial quenching chamber to identify cooling inefficiencies.",
+    thumbnail: quenchingPressure,
+    images: [
+      { src: quenchingPressure, caption: "Pressure contour with streamlines" },
+      { src: quenchingTemp, caption: "Static temperature contour (K)" },
+    ],
+    specs: [
+      { label: "Industry", value: "Polymer Processing" },
+      { label: "Software", value: "ANSYS Fluent" },
+      { label: "Flow", value: "Laminar, incompressible" },
+      { label: "Analysis", value: "Velocity, pressure & temperature fields" },
+    ],
+    overview:
+      "CFD study of a quenching chamber with non-uniform cooling. Using ANSYS Fluent we evaluated axial airflow, wake regions behind the fiber, and thermal distribution — pinpointing inefficiencies and providing actionable design improvements to reduce product defects.",
+    software: ["ANSYS Fluent"],
+  },
+  {
+    slug: "finned-tube-heat-exchanger-cfd",
+    title: "Finned Tube Heat Exchanger CFD",
+    category: "CFD Analysis",
+    type: "analysis",
+    industry: "HVAC",
+    description:
+      "Steady-state thermal CFD of a finned tube heat exchanger evaluating coil-wide heat distribution.",
+    thumbnail: finnedTubeTemp,
+    images: [{ src: finnedTubeTemp, caption: "Temperature contour across finned tube coil (~294–324 K)" }],
+    specs: [
+      { label: "Industry", value: "HVAC / Heat Transfer" },
+      { label: "Software", value: "ANSYS Fluent 2024 R1" },
+      { label: "Analysis", value: "Steady-state thermal" },
+      { label: "Output", value: "Temperature contours & gradients" },
+    ],
+    overview:
+      "Steady-state ANSYS Fluent simulation of a finned tube heat exchanger. The analysis quantified gradual temperature drop along the coil, validated fin-driven dissipation, and supported design optimisation for improved cooling/heating performance.",
+    software: ["ANSYS Fluent"],
+  },
+  {
+    slug: "f1-front-wing-cfd",
+    title: "F1 Front Wing — Aerodynamic CFD",
+    category: "External Aerodynamics",
+    type: "analysis",
+    industry: "Automotive Aerodynamics",
+    description:
+      "Comparative CFD of multi-element F1 front wing configurations evaluating drag and lift.",
+    thumbnail: f1VelocityContour,
+    images: [
+      { src: f1VelocityContour, caption: "Velocity contour visualisation" },
+      { src: f1Streamlines, caption: "Velocity streamline analysis" },
+    ],
+    specs: [
+      { label: "Industry", value: "Motorsport / Automotive Aero" },
+      { label: "Software", value: "ANSYS Fluent" },
+      { label: "Study", value: "Flap angle + slot gap configurations" },
+      { label: "Best Case", value: "+9.4% lift (with controlled drag trade-off)" },
+    ],
+    overview:
+      "External aerodynamic CFD of a multi-element F1 front wing. We compared flap angles and slot gaps, identifying an optimised setup that produced ~9.4% lift improvement vs baseline with quantified drag trade-off — informing design decisions before physical testing.",
+    software: ["ANSYS Fluent"],
+  },
+  {
+    slug: "battery-pack-cfd",
+    title: "Li-ion Battery Pack — Cooling CFD",
+    category: "Thermal CFD",
+    type: "analysis",
+    industry: "Energy Storage",
+    description:
+      "ANSYS Fluent CFD comparing straight-type and Z-type airflow with multiple cell spacings.",
+    thumbnail: batteryTemp,
+    images: [
+      { src: batteryMesh, caption: "Battery pack meshing — straight type" },
+      { src: batteryTemp, caption: "Temperature contour — Z-type top view" },
+      { src: batteryVelocity, caption: "Velocity contour — Z-type" },
+    ],
+    specs: [
+      { label: "Industry", value: "Energy Storage / EV" },
+      { label: "Software", value: "ANSYS Fluent, Meshing, CFD-Post" },
+      { label: "Validation", value: "Reynolds & Nusselt correlations" },
+      { label: "Outcome", value: "Reduced hotspots, improved uniformity" },
+    ],
+    overview:
+      "Conjugate heat transfer CFD of cylindrical Li-ion battery packs. Comparative simulations of straight-type vs Z-type airflow and 1/2/3 mm cell spacings highlighted optimal configurations — reducing hotspot formation and improving thermal uniformity, validated against Reynolds and Nusselt-based correlations.",
+    software: ["ANSYS Fluent", "ANSYS Meshing", "CFD-Post", "SolidWorks"],
+  },
+  {
+    slug: "aircraft-wing-cfd",
+    title: "Aircraft Wing CFD — Aerodynamic Profile",
+    category: "External Aerodynamics",
     type: "analysis",
     industry: "Aerospace",
     description:
-      "Static pressure and velocity field analysis around an airfoil using ANSYS Fluent.",
-    thumbnail: airfoilPressure,
+      "Pressure-based steady-state CFD with k-ω SST for lift, drag, and flow separation prediction.",
+    thumbnail: wingPressure,
     images: [
-      { src: airfoilPressure, caption: "Static pressure contour around airfoil" },
-      { src: airfoilVelocity, caption: "Velocity magnitude field around airfoil" },
+      { src: wingMesh, caption: "ANSYS computational mesh & fluid domain" },
+      { src: wingPressure, caption: "Total pressure contour — lift generation zones" },
+      { src: wingVelocity, caption: "Velocity magnitude contour" },
+      { src: wingVectors, caption: "Velocity vectors — trailing edge wake" },
     ],
     specs: [
-      { label: "Airfoil", value: "NACA series" },
-      { label: "Flow Regime", value: "Incompressible, turbulent" },
-      { label: "Analysis Type", value: "2D steady-state" },
-      { label: "Solver", value: "Pressure-based" },
+      { label: "Industry", value: "Aerospace" },
+      { label: "Software", value: "SolidWorks → ANSYS Fluent" },
+      { label: "Solver", value: "Pressure-based steady-state" },
       { label: "Turbulence Model", value: "k-ω SST" },
+      { label: "Outputs", value: "Lift, drag, pressure & velocity fields" },
     ],
     overview:
-      "A 2D CFD study of flow around an airfoil section examining static pressure distribution and velocity fields. Used to evaluate lift and drag characteristics at varying angles of attack.",
-    software: ["ANSYS Fluent 2024 R2"],
-  },
-  {
-    slug: "mixing-tank-cfd",
-    title: "Mixing Tank Thermal CFD",
-    category: "CFD Analysis",
-    type: "analysis",
-    industry: "HVAC",
-    description:
-      "Thermal-fluid simulation of a mixing tank with temperature pathlines and contour analysis.",
-    thumbnail: mixtankPathlines,
-    images: [
-      { src: mixtankPathlines, caption: "Temperature pathlines in mixing tank" },
-      { src: mixtankTemp, caption: "Static temperature contour — cross-section" },
-    ],
-    specs: [
-      { label: "Analysis Type", value: "Conjugate heat transfer" },
-      { label: "Temperature Range", value: "288 – 358 K" },
-      { label: "Flow Type", value: "Turbulent mixing" },
-      { label: "Solver", value: "Pressure-based, coupled" },
-      { label: "Visualisation", value: "Pathlines & contours" },
-    ],
-    overview:
-      "A conjugate heat transfer simulation of a mixing tank analysing temperature distribution through pathlines and contour plots. The study evaluates thermal mixing efficiency and identifies hot/cold zones within the chamber.",
-    software: ["ANSYS Fluent 2024 R2"],
-  },
-  {
-    slug: "heatsink-cfd",
-    title: "Pin-Fin Heat Sink CFD",
-    category: "Thermal Analysis",
-    type: "analysis",
-    industry: "Electronics",
-    description:
-      "Thermal and flow analysis of a pin-fin heat sink with temperature and pressure distribution.",
-    thumbnail: heatsinkTemp,
-    images: [
-      { src: heatsinkCad, caption: "3D CAD model of pin-fin heat sink" },
-      { src: heatsink3d, caption: "Isometric view — transparent enclosure" },
-      { src: heatsinkTemp, caption: "Static temperature contour — top plane" },
-      { src: heatsinkPressure, caption: "Static pressure contour — top plane" },
-    ],
-    specs: [
-      { label: "Fin Type", value: "Cylindrical pin-fin array" },
-      { label: "Array", value: "5 × 5 staggered" },
-      { label: "Temperature Range", value: "298 – 333 K" },
-      { label: "Pressure Drop", value: "~64 Pa max" },
-      { label: "Analysis Type", value: "Conjugate heat transfer + flow" },
-      { label: "Solver", value: "ANSYS Fluent, pressure-based" },
-    ],
-    overview:
-      "A comprehensive thermal-fluid analysis of a staggered pin-fin heat sink. The study covers temperature distribution, pressure drop across the fin array, and flow patterns to optimise cooling performance for electronics applications.",
-    software: ["ANSYS Fluent 2025 R2", "ANSYS SpaceClaim"],
+      "End-to-end aerodynamic CFD workflow: SolidWorks wing geometry exported via STEP/IGES, meshed in ANSYS, and solved in Fluent with k-ω SST. Pressure and velocity contours validate Bernoulli-driven lift generation and resolve trailing-edge wake behaviour for design refinement.",
+    software: ["SolidWorks", "ANSYS Meshing", "ANSYS Fluent"],
   },
 
-  // ── Oil & Gas ──
+  // ─────────────────────────────────────────────────────────────
+  //  ARCHITECTURE & INTERIOR PROJECTS
+  // ─────────────────────────────────────────────────────────────
   {
-    slug: "pipeline-flow-cfd",
-    title: "Pipeline Junction CFD",
-    category: "Flow Simulation",
-    type: "analysis" as const,
-    industry: "Oil & Gas",
+    slug: "residential-bim-plans",
+    title: "Residential BIM Plans & Drawings",
+    category: "2D & 3D Drafting",
+    type: "architecture",
+    industry: "Residential Architecture",
     description:
-      "Multiphase CFD analysis of flow through a subsea pipeline junction with erosion prediction.",
-    thumbnail: pipelineCfd,
+      "Detailed floor plans, elevations, sections, and walkthroughs using Autodesk Revit BIM.",
+    thumbnail: archPlan1,
     images: [
-      { src: pipelineCfd, caption: "Velocity contour through pipeline junction" },
+      { src: archPlan1, caption: "Residential floor plan layouts" },
+      { src: archPlan2, caption: "Section & elevation drawings" },
+      { src: arch3d1, caption: "Revit 3D BIM view" },
+      { src: arch3d2, caption: "Building information model" },
     ],
     specs: [
-      { label: "Flow Regime", value: "Multiphase (oil-water-gas)" },
-      { label: "Pipe Diameter", value: "12\" (DN300)" },
-      { label: "Operating Pressure", value: "25 MPa" },
-      { label: "Mesh Cells", value: "~4.8 M polyhedral" },
-      { label: "Turbulence Model", value: "Realizable k-ε" },
-      { label: "Erosion Model", value: "DNV-RP-O501" },
+      { label: "Discipline", value: "Architectural Drafting / BIM" },
+      { label: "Software", value: "Autodesk Revit, AutoCAD" },
+      { label: "Deliverables", value: "Plans, sections, elevations, walkthroughs" },
+      { label: "Standard", value: "Regulatory compliant layouts" },
     ],
     overview:
-      "A multiphase CFD study of flow through a subsea pipeline tee-junction, predicting velocity distribution, pressure drop, and erosion-prone zones. Results informed weld overlay placement and wall-thickness optimisation to extend service life.",
-    software: ["ANSYS Fluent", "ANSYS Meshing"],
+      "End-to-end architectural documentation for residential projects using Revit and AutoCAD. Includes precise staircase details, room dimensions, wall scheduling, structural sections, and full BIM 3D models for clear coordination and client review.",
+    software: ["Autodesk Revit", "AutoCAD"],
   },
   {
-    slug: "subsea-manifold",
-    title: "Subsea Manifold Assembly",
-    category: "SolidWorks CAD",
-    type: "cad" as const,
-    industry: "Oil & Gas",
+    slug: "modern-villa-exteriors",
+    title: "Modern Villa & Tower Exteriors",
+    category: "Architectural Visualisation",
+    type: "architecture",
+    industry: "Residential Architecture",
     description:
-      "Detailed CAD model of a subsea production manifold with valve assemblies and piping.",
-    thumbnail: subseaManifold,
+      "Photo-realistic exteriors of modern villas, hillside homes, and high-rise tower facades.",
+    thumbnail: archExt1,
     images: [
-      { src: subseaManifold, caption: "Isometric render of subsea manifold" },
+      { src: archExt1, caption: "Modern villa exterior — pool & lounge" },
+      { src: archExt2, caption: "Hillside contemporary home" },
+      { src: archExt3, caption: "Two-storey villa with landscaped grounds" },
+      { src: archExt4, caption: "High-rise tower facade" },
+      { src: archRender1, caption: "Driveway view — premium residence" },
+      { src: archRender2, caption: "Palm-lined modern villa" },
     ],
     specs: [
-      { label: "Material", value: "Super duplex stainless steel" },
-      { label: "Design Pressure", value: "690 bar" },
-      { label: "Bore Sizes", value: "4\" – 10\"" },
-      { label: "Valves", value: "6 × gate valves, 2 × choke" },
-      { label: "Depth Rating", value: "3 000 m" },
-      { label: "Standard", value: "API 17D / ISO 13628-4" },
+      { label: "Discipline", value: "Architectural Rendering" },
+      { label: "Software", value: "Revit + V-Ray / Lumion / Twinmotion / Corona" },
+      { label: "Style", value: "Modern, minimalist, luxury" },
+      { label: "Output", value: "High-end CGI with materials & lighting" },
     ],
     overview:
-      "A fully detailed subsea manifold assembly modelled in SolidWorks for a deepwater production system. Includes gate valves, choke valves, hub connectors, and structural frame designed to API 17D requirements.",
-    software: ["SolidWorks 2024", "DraftSight"],
-  },
-
-  // ── Aerospace ──
-  {
-    slug: "turbine-blade-fea",
-    title: "Turbine Blade FEA",
-    category: "Stress Analysis",
-    type: "analysis" as const,
-    industry: "Aerospace",
-    description:
-      "Thermo-structural FEA of a gas turbine blade under centrifugal and thermal loading.",
-    thumbnail: turbineFea,
-    images: [
-      { src: turbineFea, caption: "Von Mises stress distribution on turbine casing" },
-    ],
-    specs: [
-      { label: "Material", value: "Inconel 718 nickel alloy" },
-      { label: "Rotational Speed", value: "12 000 RPM" },
-      { label: "Gas Temperature", value: "1 150 °C" },
-      { label: "Mesh Elements", value: "~620 000 hex-dominant" },
-      { label: "Analysis Type", value: "Coupled thermo-structural" },
-      { label: "Creep Model", value: "Norton power law" },
-    ],
-    overview:
-      "A coupled thermo-structural finite element analysis of a first-stage gas turbine blade subjected to centrifugal loading, thermal gradients, and gas-path pressure. Creep life assessment was performed using the Larson-Miller parameter.",
-    software: ["ANSYS Mechanical", "ANSYS Workbench"],
+      "Ultra-realistic exterior renderings spanning modern A-frame cottages, minimalist luxury villas, and eco-friendly high-rise towers. Each render captures material selection, lighting, landscaping, and indoor–outdoor integration ready for client marketing and approvals.",
+    software: ["Autodesk Revit", "V-Ray", "Lumion", "Twinmotion", "Corona"],
   },
   {
-    slug: "wing-rib-design",
-    title: "Aircraft Wing Rib Design",
-    category: "SolidWorks CAD",
-    type: "cad" as const,
-    industry: "Aerospace",
+    slug: "luxury-interior-design",
+    title: "Luxury Interior Design Renderings",
+    category: "Interior Visualisation",
+    type: "architecture",
+    industry: "Interior Design",
     description:
-      "Lightweight wing rib structure with lightening holes and stiffener optimisation.",
-    thumbnail: wingRibCad,
+      "Photo-realistic interiors — bedrooms, kitchens, bathrooms, and open living spaces.",
+    thumbnail: archInt1,
     images: [
-      { src: wingRibCad, caption: "Isometric view of machined wing rib" },
+      { src: archInt1, caption: "Master bedroom with walk-in closet" },
+      { src: archInt2, caption: "Bedroom with garden view" },
+      { src: archInt3, caption: "Bedroom with fireplace" },
+      { src: archInt4, caption: "Bedroom with feature window" },
+      { src: archInt5, caption: "Modern kitchen & dining" },
+      { src: archInt6, caption: "Living & dining open layout" },
+      { src: archInt7, caption: "Spa-style bathroom" },
     ],
     specs: [
-      { label: "Material", value: "7075-T6 aluminium alloy" },
-      { label: "Chord Length", value: "1 200 mm" },
-      { label: "Thickness", value: "3.2 mm (web), 6 mm (flanges)" },
-      { label: "Weight Saving", value: "34 % vs solid plate" },
-      { label: "Manufacturing", value: "5-axis CNC milling" },
-      { label: "Standard", value: "EASA CS-25" },
+      { label: "Discipline", value: "Interior Architecture & CGI" },
+      { label: "Software", value: "Revit + V-Ray / Lumion / Corona" },
+      { label: "Spaces", value: "Bedrooms, kitchens, bathrooms, living rooms" },
+      { label: "Style", value: "Luxury, modern, warm minimalist" },
     ],
     overview:
-      "A lightweight wing rib designed for a commuter aircraft, featuring topology-optimised lightening holes and integral stiffeners. The design reduces mass by 34 % while meeting EASA CS-25 static strength and fatigue requirements.",
-    software: ["SolidWorks 2024", "Altair Inspire"],
-  },
-
-  // ── HVAC ──
-  {
-    slug: "hvac-duct-cfd",
-    title: "HVAC Duct Flow CFD",
-    category: "CFD Analysis",
-    type: "analysis" as const,
-    industry: "HVAC",
-    description:
-      "Air distribution CFD study for a commercial building ductwork system with thermal comfort analysis.",
-    thumbnail: hvacDuctCfd,
-    images: [
-      { src: hvacDuctCfd, caption: "Velocity pathlines through duct network" },
-    ],
-    specs: [
-      { label: "System Type", value: "Variable Air Volume (VAV)" },
-      { label: "Supply Air", value: "5 000 CFM" },
-      { label: "Temperature Range", value: "12 – 24 °C" },
-      { label: "Mesh Cells", value: "~2.4 M polyhedral" },
-      { label: "Turbulence Model", value: "k-ε RNG" },
-      { label: "Standard", value: "ASHRAE 55 / 62.1" },
-    ],
-    overview:
-      "A CFD analysis of air distribution in a commercial HVAC duct system to evaluate flow uniformity, pressure losses, and thermal comfort. Results guided damper sizing and diffuser selection to meet ASHRAE 55 comfort criteria.",
-    software: ["ANSYS Fluent 2024 R2", "AutoCAD MEP"],
+      "Premium interior visualisations focused on luxury, warmth, and optimal space utilisation — accent walls, ambient lighting, custom wardrobes, modular gourmet kitchens with marble islands, and spa-like bathrooms with freestanding tubs and gold-accented fixtures.",
+    software: ["Autodesk Revit", "V-Ray", "Lumion", "Corona Renderer"],
   },
   {
-    slug: "ahu-design",
-    title: "Air Handling Unit Design",
-    category: "SolidWorks CAD",
-    type: "cad" as const,
-    industry: "HVAC",
+    slug: "art-pavilion-3d",
+    title: "Art Pavilion — 3D Concept",
+    category: "Conceptual Architecture",
+    type: "architecture",
+    industry: "Commercial Architecture",
     description:
-      "Complete AHU design with fan, coil, and filter sections for commercial ventilation.",
-    thumbnail: ahuCad,
+      "Sculptural pavilion concept with lattice walls developed through Revit 3D modelling.",
+    thumbnail: arch3d1,
     images: [
-      { src: ahuCad, caption: "Cutaway render of air handling unit" },
+      { src: arch3d1, caption: "Art Pavilion — exterior 3D view" },
+      { src: arch3d2, caption: "Lattice wall structural detail" },
     ],
     specs: [
-      { label: "Airflow", value: "10 000 CFM" },
-      { label: "Fan Type", value: "Backward-curved centrifugal" },
-      { label: "Coil Rows", value: "6-row chilled water" },
-      { label: "Filter", value: "MERV 13 + HEPA" },
-      { label: "Casing", value: "Double-skin insulated panels" },
-      { label: "Standard", value: "ASHRAE 90.1 / EN 1886" },
+      { label: "Discipline", value: "Conceptual Architecture" },
+      { label: "Software", value: "Autodesk Revit" },
+      { label: "Feature", value: "Lattice facade & sculptural form" },
+      { label: "Use", value: "Commercial / cultural pavilion" },
     ],
     overview:
-      "A fully parametric air handling unit designed in SolidWorks for a commercial building HVAC system. Includes centrifugal fan, chilled water coils, multi-stage filtration, and double-skin insulated casing with access panels.",
-    software: ["SolidWorks 2024", "HAP (Carrier)"],
+      "A conceptual art pavilion exploring sculptural form and lattice facade engineering. Developed in Revit with detailed structural framing and curtain wall design — bridging architectural expression with constructible geometry.",
+    software: ["Autodesk Revit"],
   },
 ];
 
 export const cadProjects = projects.filter((p) => p.type === "cad");
 export const analysisProjects = projects.filter((p) => p.type === "analysis");
+export const architectureProjects = projects.filter((p) => p.type === "architecture");
 export const industries = [...new Set(projects.map((p) => p.industry))].sort();
 
 export default projects;
