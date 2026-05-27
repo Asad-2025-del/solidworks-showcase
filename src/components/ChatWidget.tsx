@@ -16,8 +16,9 @@ export const ChatWidget = () => {
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState<Msg[]>([
-    { role: "assistant", content: "Hi! I'm the Apex Engineering assistant. Ask me about our Civil, Structural, or Mechanical services." },
+    { role: "assistant", content: "Hi! I'm the Apex Engineering assistant. Ask about our **Civil, Structural, or Mechanical** work — I can point you to specific projects in our portfolio (e.g. F1 wing CFD, Li-ion battery cooling, BIM plans)." },
   ]);
+
   const [loading, setLoading] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
