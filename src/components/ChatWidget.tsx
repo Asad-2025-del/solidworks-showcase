@@ -2,6 +2,10 @@ import { useState, useRef, useEffect } from "react";
 import { MessageCircle, X, Send, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
+import ReactMarkdown from "react-markdown";
+import { Link } from "react-router-dom";
+
+
 
 type Msg = { role: "user" | "assistant"; content: string };
 
