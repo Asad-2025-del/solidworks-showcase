@@ -113,7 +113,26 @@ export const ChatWidget = () => {
                 {m.role === "user" ? (
                   <div className="bg-primary text-primary-foreground rounded-2xl rounded-br-sm px-3 py-2 max-w-[85%] text-sm whitespace-pre-wrap">{m.content}</div>
                 ) : (
-                  <div className="text-sm text-foreground whitespace-pre-wrap max-w-[95%]">{m.content || <Loader2 className="h-4 w-4 animate-spin text-muted-foreground" />}</div>
+                  <div className="text-sm text-foreground max-w-[95%] prose prose-sm prose-invert prose-p:my-1 prose-ul:my-1 prose-li:my-0 prose-a:text-primary prose-a:no-underline hover:prose-a:underline break-words">
+                    {m.content ? (
+                      <ReactMarkdown
+                        components={{
+                          a: ({ href, children }) => {
+                            const url = href || "";
+                            if (url.startsWith("/")) {
+                              return <Link to={url} onClick={() => setOpen(false)}>{children}</Link>;
+                            }
+                            return <a href={url} target="_blank" rel="noopener noreferrer">{children}</a>;
+                          },
+                        }}
+                      >
+                        {m.content}
+                      </ReactMarkdown>
+                    ) : (
+                      <Loader2 className="h-4 w-4 animate-spin text-muted-foreground" />
+                    )}
+                  </div>
+
                 )}
               </div>
             ))}
