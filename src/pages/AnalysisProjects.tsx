@@ -19,10 +19,10 @@ const AnalysisProjects = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Analysis Projects — FEA & CFD Simulation | Apex Engineering Group</title>
+        <title>Analysis Projects — FEA & CFD Simulation | CMA group of companies</title>
         <meta name="description" content="ANSYS FEA stress analysis, CFD flow simulation, thermal studies, and aerodynamic optimisation for industrial applications." />
         <link rel="canonical" href="https://mech-gallery-plus.lovable.app/analysis-projects" />
-        <meta property="og:title" content="Analysis Projects — FEA & CFD Simulation | Apex Engineering Group" />
+        <meta property="og:title" content="Analysis Projects — FEA & CFD Simulation | CMA group of companies" />
         <meta property="og:description" content="ANSYS FEA stress analysis, CFD flow simulation, thermal studies, and aerodynamic optimisation for industrial applications." />
         <meta property="og:url" content="https://mech-gallery-plus.lovable.app/analysis-projects" />
       </Helmet>

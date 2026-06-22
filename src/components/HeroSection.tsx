@@ -44,7 +44,7 @@ const HeroSection = () => {
         >
           <span className="text-gradient">Civil. Structural.</span>
           <span className="text-foreground"> Mechanical.</span>
-          <span className="sr-only"> — Apex Engineering Group</span>
+          <span className="sr-only"> — CMA group of companies</span>
         </motion.h1>
 
         <motion.p

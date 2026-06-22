@@ -22,16 +22,16 @@ const Portfolio = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Portfolio — Engineering Projects by Industry | Apex Engineering Group</title>
+        <title>Portfolio — Engineering Projects by Industry | CMA group of companies</title>
         <meta name="description" content="Browse CAD and simulation projects across Aerospace, Oil & Gas, HVAC, and Manufacturing. Filter by industry to find relevant engineering work." />
         <link rel="canonical" href="https://mech-gallery-plus.lovable.app/portfolio" />
-        <meta property="og:title" content="Portfolio — Engineering Projects by Industry | Apex Engineering Group" />
+        <meta property="og:title" content="Portfolio — Engineering Projects by Industry | CMA group of companies" />
         <meta property="og:description" content="Browse CAD and simulation projects across Aerospace, Oil & Gas, HVAC, and Manufacturing." />
         <meta property="og:url" content="https://mech-gallery-plus.lovable.app/portfolio" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "CollectionPage",
-          name: "Apex Engineering Group Portfolio",
+          name: "CMA group of companies Portfolio",
           description: "Engineering portfolio of CAD modeling, FEA, and CFD projects across multiple industries.",
           url: "https://mech-gallery-plus.lovable.app/portfolio",
         })}</script>
