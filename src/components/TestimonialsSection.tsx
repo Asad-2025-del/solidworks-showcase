@@ -6,7 +6,7 @@ const testimonials = [
     name: "Bilal H.",
     role: "Developer — Residential Project",
     quote:
-      "The 3D renderings and 5D walkthrough Apex produced helped us pre-sell units before breaking ground. The floor plans were clean, code-compliant, and contractor-ready.",
+      "The 3D renderings and 5D walkthrough CMA group of companies produced helped us pre-sell units before breaking ground. The floor plans were clean, code-compliant, and contractor-ready.",
     stars: 5,
   },
   {
@@ -20,7 +20,7 @@ const testimonials = [
     name: "Ahmed R.",
     role: "Plant Manager — Manufacturing",
     quote:
-      "Apex redesigned our heat exchanger assembly and validated it with CFD. We cut prototype iterations from 5 to 2 and saved three weeks of development time.",
+      "CMA group of companies redesigned our heat exchanger assembly and validated it with CFD. We cut prototype iterations from 5 to 2 and saved three weeks of development time.",
     stars: 5,
   },
 ];
