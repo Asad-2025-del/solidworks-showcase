@@ -77,7 +77,7 @@ const ServicesSection = () => {
             <span className="text-gradient">One Group.</span>
           </h2>
           <p className="mt-4 mx-auto max-w-2xl text-muted-foreground">
-            Apex Engineering Group brings civil, structural, and mechanical
+            CMA group of companies brings civil, structural, and mechanical
             expertise under one roof — so your project moves seamlessly from
             concept through analysis to construction and manufacturing.
           </p>

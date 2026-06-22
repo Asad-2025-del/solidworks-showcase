@@ -19,10 +19,10 @@ const ArchitectureProjects = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Architecture & Interior Projects — Revit BIM & Renderings | Apex Engineering Group</title>
+        <title>Architecture & Interior Projects — Revit BIM & Renderings | CMA group of companies</title>
         <meta name="description" content="Architectural BIM, 2D/3D plans, exterior and interior photo-realistic renderings using Revit, AutoCAD, V-Ray, Lumion and Corona." />
         <link rel="canonical" href="https://apexenggrp.lovable.app/architecture-projects" />
-        <meta property="og:title" content="Architecture & Interior Projects | Apex Engineering Group" />
+        <meta property="og:title" content="Architecture & Interior Projects | CMA group of companies" />
         <meta property="og:description" content="Architectural BIM, 2D/3D plans, exterior and interior photo-realistic renderings." />
       </Helmet>
       <Navbar />

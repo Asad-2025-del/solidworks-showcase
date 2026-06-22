@@ -16,7 +16,7 @@ import Footer from "@/components/Footer";
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "Apex Engineering Group",
+  name: "CMA group of companies",
   description:
     "Multi-disciplinary engineering consultancy offering civil design, structural engineering, and mechanical CAD/FEA/CFD services.",
   url: "https://mech-gallery-plus.lovable.app",

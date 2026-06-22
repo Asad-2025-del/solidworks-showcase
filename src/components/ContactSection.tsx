@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const ContactSection = () => {
   const whatsappNumber = "923378284111";
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hi Apex Engineering Group, I'd like to discuss a project.")}`;
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hi CMA group of companies, I'd like to discuss a project.")}`;
 
   return (
     <section id="contact" className="py-24 bg-muted/30">

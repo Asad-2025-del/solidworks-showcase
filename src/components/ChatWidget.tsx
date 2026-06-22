@@ -16,7 +16,7 @@ export const ChatWidget = () => {
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState<Msg[]>([
-    { role: "assistant", content: "Hi! I'm the Apex Engineering assistant. Ask about our **Civil, Structural, or Mechanical** work — I can point you to specific projects in our portfolio (e.g. F1 wing CFD, Li-ion battery cooling, BIM plans)." },
+    { role: "assistant", content: "Hi! I'm the CMA group of companies assistant. Ask about our **Civil, Structural, or Mechanical** work — I can point you to specific projects in our portfolio (e.g. F1 wing CFD, Li-ion battery cooling, BIM plans)." },
   ]);
 
   const [loading, setLoading] = useState(false);
@@ -103,7 +103,7 @@ export const ChatWidget = () => {
       {open && (
         <div className="fixed bottom-24 left-6 z-50 w-[calc(100vw-3rem)] sm:w-96 h-[32rem] bg-card border border-border rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-4">
           <div className="px-4 py-3 border-b border-border bg-primary/10">
-            <div className="font-semibold text-foreground">Apex Assistant</div>
+            <div className="font-semibold text-foreground">CMA Assistant</div>
             <div className="text-xs text-muted-foreground">Ask about our engineering services</div>
           </div>
 

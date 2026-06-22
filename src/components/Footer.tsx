@@ -5,15 +5,15 @@ const Footer = () => {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
           <a href="/" className="flex items-center gap-2">
             <span className="text-lg font-bold tracking-tight">
-              <span className="text-gradient">Apex Engineering</span>
-              <span className="text-foreground"> Group</span>
+              <span className="text-gradient">CMA group</span>
+              <span className="text-foreground"> of companies</span>
             </span>
           </a>
           <p className="text-xs text-muted-foreground text-center">
             Civil · Structural · Mechanical — integrated engineering for construction and industry.
           </p>
           <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Apex Engineering Group
+            © {new Date().getFullYear()} CMA group
           </p>
 
         </div>

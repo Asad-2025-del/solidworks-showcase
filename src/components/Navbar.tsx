@@ -20,8 +20,8 @@ const Navbar = () => {
       <div className="container mx-auto flex h-16 items-center justify-between px-6">
         <a href="/" className="flex items-center gap-2">
           <span className="text-xl font-bold tracking-tight">
-            <span className="text-gradient">Apex Engineering</span>
-            <span className="text-foreground"> Group</span>
+            <span className="text-gradient">CMA group</span>
+            <span className="text-foreground"> of companies</span>
           </span>
         </a>
 

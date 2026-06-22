@@ -5,17 +5,17 @@ const portfolios = [
   {
     title: "Architecture & Interior",
     desc: "Revit BIM plans, exterior & interior photo-realistic renderings.",
-    href: "/portfolios/Apex-Architecture-Portfolio.pdf",
+    href: "/portfolios/CMA-Architecture-Portfolio.pdf",
   },
   {
     title: "CAD / Design Portfolio",
     desc: "SolidWorks 3D modelling, assemblies & industrial design projects.",
-    href: "/portfolios/Apex-CAD-Portfolio.pdf",
+    href: "/portfolios/CMA-CAD-Portfolio.pdf",
   },
   {
     title: "CFD / Simulation Portfolio",
     desc: "ANSYS Fluent thermal, flow & aerodynamic simulation case studies.",
-    href: "/portfolios/Apex-CFD-Portfolio.pdf",
+    href: "/portfolios/CMA-CFD-Portfolio.pdf",
   },
 ];
 

@@ -34,7 +34,7 @@ const AboutSection = () => {
               An Integrated <span className="text-gradient">Engineering Group</span>
             </h2>
             <p className="mb-4 text-muted-foreground leading-relaxed">
-              <strong className="text-foreground">Apex Engineering Group</strong> is a
+              <strong className="text-foreground">CMA group of companies</strong> is a
               multi-disciplinary consultancy bringing together{" "}
               <strong className="text-foreground">civil</strong>,{" "}
               <strong className="text-foreground">structural</strong>, and{" "}
