@@ -8,7 +8,7 @@ import ProjectDetail from "./pages/ProjectDetail";
 import CadProjects from "./pages/CadProjects";
 import AnalysisProjects from "./pages/AnalysisProjects";
 import ArchitectureProjects from "./pages/ArchitectureProjects";
-import Portfolio from "./pages/Portfolio";
+
 import NotFound from "./pages/NotFound";
 import WhatsAppFloat from "./components/WhatsAppFloat";
 import { ChatWidget } from "./components/ChatWidget";
@@ -28,7 +28,7 @@ const App = () => (
           <Route path="/cad-projects" element={<CadProjects />} />
           <Route path="/analysis-projects" element={<AnalysisProjects />} />
           <Route path="/architecture-projects" element={<ArchitectureProjects />} />
-          <Route path="/portfolio" element={<Portfolio />} />
+          
           <Route path="/project/:slug" element={<ProjectDetail />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

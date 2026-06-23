@@ -6,8 +6,7 @@ CMA group of companies is led by Asadullah Anis. We bring civil, structural, and
 
 ## Pages
 
-- [Home](/): Overview of all three divisions, portfolio, pricing, and contact.
-- [Portfolio](/portfolio): Full project gallery across civil, structural, and mechanical disciplines.
+- [Home](/): Overview of all three divisions, projects, pricing, and contact.
 - [CAD Projects](/cad-projects): Mechanical CAD modeling, SolidWorks assemblies, and drawings.
 - [Analysis Projects](/analysis-projects): FEA stress analysis, CFD flow simulation, and thermal studies.
 
