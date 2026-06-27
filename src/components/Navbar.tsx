@@ -6,10 +6,10 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   const links = [
-    
     { label: "Architecture", href: "/architecture-projects" },
     { label: "CAD", href: "/cad-projects" },
     { label: "CFD & Analysis", href: "/analysis-projects" },
+    { label: "Portfolio", href: "/portfolios/CMA-Group-Corporate-Portfolio.pdf", download: true },
     { label: "Services", href: "/#services" },
     { label: "Pricing", href: "/#pricing" },
     { label: "Contact", href: "/#contact" },
@@ -32,6 +32,7 @@ const Navbar = () => {
             <a
               key={l.href}
               href={l.href}
+              {...(l.download ? { download: "", target: "_blank", rel: "noopener" } : {})}
               className="text-sm text-muted-foreground hover:text-primary transition-colors"
             >
               {l.label}
@@ -63,6 +64,7 @@ const Navbar = () => {
               <a
                 key={l.href}
                 href={l.href}
+                {...(l.download ? { download: "", target: "_blank", rel: "noopener" } : {})}
                 className="text-muted-foreground hover:text-primary transition-colors"
                 onClick={() => setOpen(false)}
               >

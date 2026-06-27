@@ -72,7 +72,7 @@ PORTFOLIO CATEGORY PAGES:
 - /architecture-projects  — Civil & Architectural
 - /cad-projects           — Mechanical CAD
 - /analysis-projects      — CFD & FEA
-- /portfolio              — Full gallery
+- /portfolios/CMA-Group-Corporate-Portfolio.pdf — Full Corporate Portfolio & Blueprint Directory (downloadable PDF)
 `;
 
 const SYSTEM_PROMPT = `You are CMA Assistant, the AI concierge for CMA group of companies — a multi-disciplinary engineering firm led by Asadullah Anis, offering Civil, Structural, and Mechanical engineering services.
