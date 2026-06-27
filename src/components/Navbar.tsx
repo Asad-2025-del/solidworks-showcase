@@ -6,10 +6,10 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   const links = [
-    
     { label: "Architecture", href: "/architecture-projects" },
     { label: "CAD", href: "/cad-projects" },
     { label: "CFD & Analysis", href: "/analysis-projects" },
+    { label: "Portfolio", href: "/portfolios/CMA-Group-Corporate-Portfolio.pdf", download: true },
     { label: "Services", href: "/#services" },
     { label: "Pricing", href: "/#pricing" },
     { label: "Contact", href: "/#contact" },
