@@ -32,6 +32,7 @@ const Navbar = () => {
             <a
               key={l.href}
               href={l.href}
+              {...(l.download ? { download: "", target: "_blank", rel: "noopener" } : {})}
               className="text-sm text-muted-foreground hover:text-primary transition-colors"
             >
               {l.label}
