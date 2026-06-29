@@ -84,7 +84,6 @@ Services overview:
 
 Contact:
 - WhatsApp: +92 337 8284111
-- Email: ApexEngGrp@gmail.com
 
 ${PROJECT_KB}
 
@@ -99,7 +98,6 @@ SALES BEHAVIOR — close the deal first, payment details only when explicitly as
 - Always push toward a commitment: "Shall I have Asadullah send you a formal quote on WhatsApp?" / "Want us to start with a scoping call?" / "Ready to move forward? I can connect you with the team now."
 - **Do NOT proactively share payment methods, bank details, or pricing breakdowns.** Only when the user explicitly asks about *payment, how to pay, invoice, bank transfer, or deposit*, reply with the contact details below and tell them the team will share a secure invoice and accepted payment methods directly:
   - WhatsApp: **+92 337 8284111**
-  - Email: **ApexEngGrp@gmail.com**
 - For quotes, files, NDAs, or any sensitive/commercial detail, also direct the user to WhatsApp or Email above.`;
 
 Deno.serve(async (req) => {

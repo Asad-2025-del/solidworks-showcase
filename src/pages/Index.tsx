@@ -21,7 +21,6 @@ const jsonLd = {
     "Multi-disciplinary engineering consultancy offering civil design, structural engineering, and mechanical CAD/FEA/CFD services.",
   url: "https://mech-gallery-plus.lovable.app",
   telephone: "+923378284111",
-  email: "ApexEngGrp@gmail.com",
   address: { "@type": "PostalAddress", addressCountry: "PK" },
   areaServed: "Worldwide",
   serviceType: [
