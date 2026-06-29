@@ -1,48 +1,48 @@
 import { motion } from "framer-motion";
-import { Quote, Star, TrendingUp, Clock, DollarSign } from "lucide-react";
+import { Quote, Star, TrendingUp, Clock, Rocket } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Bilal H.",
-    role: "Developer — Residential Project",
+    name: "Hamza T.",
+    role: "Founder — EV Battery Startup",
     quote:
-      "The 3D renderings and 5D walkthrough CMA group of companies produced helped us pre-sell units before breaking ground. The floor plans were clean, code-compliant, and contractor-ready.",
+      "We were a 3-person team trying to validate a Li-ion pack design before our seed round. CMA group ran the CFD on both straight and Z-type airflow layouts and gave us a clear recommendation backed by Nusselt/Reynolds correlations. We walked into our investor meeting with real thermal data — and closed the round.",
     stars: 5,
   },
   {
-    name: "Sara K.",
-    role: "Structural Lead — Commercial Build",
+    name: "Ayesha M.",
+    role: "Co-founder — Boutique Real Estate Studio",
     quote:
-      "Their seismic analysis and RCC detailing came back fully verified against local building codes. Drawings were exactly what our site team needed — zero ambiguity.",
+      "As a brand-new studio we couldn't afford an in-house BIM team. Asadullah's team delivered the Revit floor plans, exterior renders, and a 5D walkthrough in under two weeks. Our first client signed the same day they saw the walkthrough.",
     stars: 5,
   },
   {
-    name: "Ahmed R.",
-    role: "Plant Manager — Manufacturing",
+    name: "Daniyal R.",
+    role: "Mechanical Lead — HVAC Startup",
     quote:
-      "CMA group of companies redesigned our heat exchanger assembly and validated it with CFD. We cut prototype iterations from 5 to 2 and saved three weeks of development time.",
+      "Our finned-tube heat exchanger was failing on uniformity. CMA group rebuilt the CAD, ran ANSYS Fluent across the coil, and pinpointed exactly where the fin pitch was wrong. Second prototype passed validation — saved us at least 6 weeks and one prototype cycle.",
     stars: 5,
   },
 ];
 
 const caseStudies = [
   {
+    icon: Rocket,
+    metric: "15+",
+    label: "Projects Delivered",
+    detail: "Across civil, structural, and mechanical disciplines",
+  },
+  {
     icon: TrendingUp,
-    metric: "38%",
-    label: "Drag Reduction",
-    detail: "CFD-optimized airfoil for an industrial ventilation unit",
+    metric: "+9.4%",
+    label: "Lift Improvement",
+    detail: "F1 front wing CFD vs baseline — real client deliverable",
   },
   {
     icon: Clock,
-    metric: "60%",
-    label: "Faster Delivery",
-    detail: "Parametric CAD & BIM templates removed manual rework",
-  },
-  {
-    icon: DollarSign,
-    metric: "$12K",
-    label: "Cost Saved",
-    detail: "Topology-optimized bracket reduced material by 45%",
+    metric: "2 wks",
+    label: "Avg. Turnaround",
+    detail: "From kickoff to first deliverable for startup clients",
   },
 ];
 
@@ -59,13 +59,13 @@ const TestimonialsSection = () => {
           transition={{ duration: 0.5 }}
         >
           <p className="mb-2 text-sm font-mono uppercase tracking-[0.2em] text-primary">
-            Proven Results
+            Real Results
           </p>
           <h2 className="text-4xl md:text-5xl font-bold">
             Client <span className="text-gradient">Success Stories</span>
           </h2>
           <p className="mt-4 mx-auto max-w-xl text-muted-foreground">
-            Real impact backed by engineering data — hear from the teams we've partnered with.
+            15+ projects shipped for founders, studios, and engineering teams — here's what they say.
           </p>
         </motion.div>
 
