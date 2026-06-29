@@ -48,6 +48,10 @@ const ContactSection = () => {
               <Phone size={16} className="text-primary" />
               <span>+92 337 8284111</span>
             </a>
+            <a href="mailto:cmagroup.pk@gmail.com" className="flex items-center gap-2 hover:text-primary transition-colors">
+              <Mail size={16} className="text-primary" />
+              <span>cmagroup.pk@gmail.com</span>
+            </a>
             <div className="flex items-center gap-2">
               <MapPin size={16} className="text-primary" />
               <span>Pakistan</span>
