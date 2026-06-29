@@ -1,4 +1,4 @@
-import { MapPin, Phone, MessageCircle } from "lucide-react";
+import { MapPin, Phone, MessageCircle, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 
 const ContactSection = () => {

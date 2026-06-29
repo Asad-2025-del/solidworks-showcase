@@ -84,6 +84,7 @@ Services overview:
 
 Contact:
 - WhatsApp: +92 337 8284111
+- Email: cmagroup.pk@gmail.com
 
 ${PROJECT_KB}
 
