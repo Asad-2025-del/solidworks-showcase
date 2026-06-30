@@ -12,6 +12,9 @@ const Footer = () => {
           <p className="text-xs text-muted-foreground text-center">
             Civil · Structural · Mechanical — integrated engineering for construction and industry.
           </p>
+          <p className="text-xs text-muted-foreground text-center">
+            M-18, ZAIN MOBILE MALL, MAIN TARIQ ROAD, KARACHI
+          </p>
           <p className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} CMA group
           </p>
