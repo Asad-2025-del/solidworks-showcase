@@ -22,7 +22,7 @@ const jsonLd = {
   url: "https://mech-gallery-plus.lovable.app",
   telephone: "+923378284111",
   email: "cmagroup.pk@gmail.com",
-  address: { "@type": "PostalAddress", addressCountry: "PK" },
+  address: { "@type": "PostalAddress", streetAddress: "M-18, ZAIN MOBILE MALL, MAIN TARIQ ROAD", addressLocality: "Karachi", addressCountry: "PK" },
   areaServed: "Worldwide",
   serviceType: [
     "Civil Engineering",

@@ -54,7 +54,7 @@ const ContactSection = () => {
             </a>
             <div className="flex items-center gap-2">
               <MapPin size={16} className="text-primary" />
-              <span>Pakistan</span>
+              <span>M-18, ZAIN MOBILE MALL, MAIN TARIQ ROAD, KARACHI</span>
             </div>
           </div>
         </motion.div>
