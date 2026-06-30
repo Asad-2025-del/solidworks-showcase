@@ -85,6 +85,7 @@ Services overview:
 Contact:
 - WhatsApp: +92 337 8284111
 - Email: cmagroup.pk@gmail.com
+- Address: M-18, ZAIN MOBILE MALL, MAIN TARIQ ROAD, KARACHI
 
 ${PROJECT_KB}
 
