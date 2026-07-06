@@ -1,43 +1,40 @@
-import { GraduationCap, Rocket, Building2, Check } from "lucide-react";
+import { Check, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 const tiers = [
   {
-    icon: GraduationCap,
     name: "Essentials",
     price: "$99",
     unit: "per project",
     description: "For single-discipline jobs — a floor plan, a CAD part, or a quick structural check.",
     features: [
-      "Single discipline (civil, structural, or mechanical)",
+      "Single discipline",
       "2D drawings or single CAD assembly",
       "One revision round",
       "PDF / DWG / STEP delivery",
       "5–7 day turnaround",
       "Email support",
     ],
-    cta: "Get Started",
+    cta: "Enquire",
     highlighted: false,
   },
   {
-    icon: Rocket,
     name: "Professional",
     price: "$399",
     unit: "per project",
     description: "Coordinated design + analysis package for developers, startups, and product teams.",
     features: [
-      "Up to two disciplines (e.g. civil + structural)",
+      "Up to two disciplines (civil + structural)",
       "3D rendering or FEA / CFD included",
       "Two revision rounds",
       "Construction- or manufacturing-ready drawings",
       "7–14 day turnaround",
       "Priority WhatsApp support",
     ],
-    cta: "Most Popular",
+    cta: "Select Tier",
     highlighted: true,
   },
   {
-    icon: Building2,
     name: "Enterprise",
     price: "Custom",
     unit: "quote",
@@ -50,81 +47,70 @@ const tiers = [
       "Dedicated project manager",
       "24 hr priority response",
     ],
-    cta: "Contact Us",
+    cta: "Contact Sales",
     highlighted: false,
   },
 ];
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.12, duration: 0.5, ease: [0, 0, 0.2, 1] as const },
-  }),
-};
 
 const PricingSection = () => {
   const whatsappUrl = `https://wa.me/923378284111?text=${encodeURIComponent("Hi CMA group of companies, I'd like to discuss pricing.")}`;
 
   return (
-    <section id="pricing" className="py-24 bg-muted/30">
+    <section id="pricing" className="py-32 border-b border-border">
       <div className="container mx-auto px-6">
         <motion.div
-          className="mb-16 text-center"
+          className="max-w-3xl mb-20"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.5 }}
         >
-          <p className="mb-2 text-sm font-mono uppercase tracking-[0.2em] text-primary">
-            Pricing
+          <p className="mb-6 text-[10px] font-mono uppercase tracking-[0.3em] text-primary">
+            — 07 / Engagement Models
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold">
-            Flexible <span className="text-gradient">Plans</span>
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tight leading-[1.02] mb-6">
+            Transparent pricing.<br />
+            <span className="text-gradient">Fixed-fee delivery.</span>
           </h2>
-          <p className="mt-4 mx-auto max-w-xl text-muted-foreground">
-            Transparent pricing for every stage — from student projects to full-scale industrial engagements.
+          <p className="text-muted-foreground max-w-xl leading-relaxed">
+            Tailored engagement structures for projects of varying scale and complexity — no hidden fees, no scope creep.
           </p>
         </motion.div>
 
-        <div className="grid gap-6 md:grid-cols-3 max-w-5xl mx-auto">
+        <div className="grid gap-px md:grid-cols-3 bg-border border border-border">
           {tiers.map((tier, i) => (
             <motion.div
               key={tier.name}
-              custom={i}
-              variants={cardVariants}
-              initial="hidden"
-              whileInView="visible"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
-              className={`relative flex flex-col rounded-lg border p-8 transition-all duration-300 ${
-                tier.highlighted
-                  ? "border-primary bg-card glow-sm scale-[1.02]"
-                  : "border-border bg-card hover:border-primary/50"
+              transition={{ delay: i * 0.1, duration: 0.5 }}
+              className={`relative flex flex-col p-10 transition-colors ${
+                tier.highlighted ? "bg-primary/5" : "bg-background hover:bg-card"
               }`}
             >
               {tier.highlighted && (
-                <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-4 py-1 text-xs font-semibold text-primary-foreground">
-                  Most Popular
+                <span className="absolute top-0 right-0 bg-primary px-3 py-1 text-[10px] font-mono uppercase tracking-widest text-primary-foreground">
+                  Recommended
                 </span>
               )}
 
-              <div className="mb-5 inline-flex self-start rounded-md bg-primary/10 p-3 text-primary">
-                <tier.icon size={24} />
+              <p className="mb-8 text-[10px] font-mono uppercase tracking-[0.22em] text-primary">
+                Tier 0{i + 1}
+              </p>
+
+              <h3 className="text-2xl font-semibold text-foreground tracking-tight">{tier.name}</h3>
+              <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{tier.description}</p>
+
+              <div className="mt-8 mb-8 pb-8 border-b border-border">
+                <span className="text-5xl font-bold text-foreground tracking-tight">{tier.price}</span>
+                <span className="ml-2 text-sm text-muted-foreground">/ {tier.unit}</span>
               </div>
 
-              <h3 className="text-xl font-bold text-foreground">{tier.name}</h3>
-              <p className="mt-1 text-sm text-muted-foreground">{tier.description}</p>
-
-              <div className="mt-6 mb-6">
-                <span className="text-4xl font-bold text-foreground">{tier.price}</span>
-                <span className="ml-1 text-sm text-muted-foreground">/ {tier.unit}</span>
-              </div>
-
-              <ul className="mb-8 flex-1 space-y-3">
+              <ul className="mb-10 flex-1 space-y-3">
                 {tier.features.map((f) => (
-                  <li key={f} className="flex items-start gap-2 text-sm text-muted-foreground">
-                    <Check size={16} className="mt-0.5 shrink-0 text-primary" />
+                  <li key={f} className="flex items-start gap-3 text-sm text-muted-foreground">
+                    <Check size={14} className="mt-1 shrink-0 text-primary" strokeWidth={2.5} />
                     {f}
                   </li>
                 ))}
@@ -134,13 +120,14 @@ const PricingSection = () => {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`mt-auto block w-full rounded-md py-3 text-center text-sm font-medium transition-colors ${
+                className={`mt-auto inline-flex items-center justify-center gap-3 w-full py-4 text-xs font-semibold uppercase tracking-widest transition-colors ${
                   tier.highlighted
-                    ? "bg-primary text-primary-foreground hover:bg-primary/90 glow-sm"
-                    : "border border-border text-foreground hover:bg-secondary"
+                    ? "bg-primary text-primary-foreground hover:bg-primary/90"
+                    : "border border-border text-foreground hover:border-primary/50 hover:bg-secondary/40"
                 }`}
               >
                 {tier.cta}
+                <ArrowRight size={14} />
               </a>
             </motion.div>
           ))}
