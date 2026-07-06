@@ -6,62 +6,73 @@ const ContactSection = () => {
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hi CMA group of companies, I'd like to discuss a project.")}`;
 
   return (
-    <section id="contact" className="py-24 bg-muted/30">
+    <section id="contact" className="py-32">
       <div className="container mx-auto px-6">
         <motion.div
-          className="mb-16 text-center"
+          className="max-w-3xl mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.5 }}
         >
-          <p className="mb-2 text-sm font-mono uppercase tracking-[0.2em] text-primary">
-            Get in Touch
+          <p className="mb-6 text-[10px] font-mono uppercase tracking-[0.3em] text-primary">
+            — 08 / Start a Partnership
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold">
-            Start Your <span className="text-gradient">Project</span>
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tight leading-[1.02]">
+            Let's engineer<br />
+            <span className="text-gradient">something exceptional.</span>
           </h2>
-          <p className="mt-4 mx-auto max-w-xl text-muted-foreground">
-            Ready to bring your engineering project to life? Reach out on WhatsApp for the fastest response.
-          </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-stretch max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 border border-border">
           <motion.div
-            className="flex flex-col justify-center gap-8 rounded-2xl border border-border bg-card p-8 md:p-10 shadow-sm"
+            className="p-10 md:p-14 border-b lg:border-b-0 lg:border-r border-border flex flex-col"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
+            <p className="mb-8 text-[10px] font-mono uppercase tracking-[0.22em] text-primary">
+              Direct Channels
+            </p>
+
             <a
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3 w-full rounded-md bg-[hsl(142,70%,45%)] py-4 px-8 text-lg font-semibold text-[hsl(0,0%,100%)] hover:bg-[hsl(142,70%,40%)] transition-colors shadow-lg"
+              className="inline-flex items-center justify-center gap-3 w-full bg-[hsl(142,70%,45%)] py-5 px-8 text-sm font-semibold uppercase tracking-widest text-white hover:bg-[hsl(142,70%,40%)] transition-colors mb-10"
             >
-              <MessageCircle size={24} />
+              <MessageCircle size={20} />
               Chat on WhatsApp
             </a>
 
-            <div className="grid gap-5 text-sm text-muted-foreground">
-              <a href="tel:+923378284111" className="flex items-center gap-3 hover:text-primary transition-colors">
-                <Phone size={18} className="text-primary shrink-0" />
-                <span>+92 337 8284111</span>
+            <div className="space-y-6 text-sm">
+              <a href="tel:+923378284111" className="flex items-start gap-4 hover:text-primary transition-colors group">
+                <Phone size={18} className="text-primary shrink-0 mt-1" strokeWidth={1.5} />
+                <div>
+                  <div className="text-[10px] font-mono uppercase tracking-[0.22em] text-muted-foreground mb-1">Phone</div>
+                  <div className="text-foreground group-hover:text-primary">+92 337 8284111</div>
+                </div>
               </a>
-              <a href="mailto:cmagroup.pk@gmail.com" className="flex items-center gap-3 hover:text-primary transition-colors">
-                <Mail size={18} className="text-primary shrink-0" />
-                <span>cmagroup.pk@gmail.com</span>
+              <a href="mailto:cmagroup.pk@gmail.com" className="flex items-start gap-4 hover:text-primary transition-colors group">
+                <Mail size={18} className="text-primary shrink-0 mt-1" strokeWidth={1.5} />
+                <div>
+                  <div className="text-[10px] font-mono uppercase tracking-[0.22em] text-muted-foreground mb-1">Email</div>
+                  <div className="text-foreground group-hover:text-primary">cmagroup.pk@gmail.com</div>
+                </div>
               </a>
-              <div className="flex items-start gap-3">
-                <MapPin size={18} className="text-primary shrink-0 mt-0.5" />
-                <span>M-18, ZAIN MOBILE MALL, MAIN TARIQ ROAD, KARACHI</span>
+              <div className="flex items-start gap-4">
+                <MapPin size={18} className="text-primary shrink-0 mt-1" strokeWidth={1.5} />
+                <div>
+                  <div className="text-[10px] font-mono uppercase tracking-[0.22em] text-muted-foreground mb-1">Office</div>
+                  <div className="text-foreground">M-18, Zain Mobile Mall<br />Main Tariq Road, Karachi</div>
+                </div>
               </div>
             </div>
           </motion.div>
 
           <motion.div
-            className="rounded-2xl border border-border overflow-hidden shadow-sm h-80 lg:h-auto min-h-[320px]"
+            className="min-h-[400px] lg:min-h-0 relative"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
@@ -70,7 +81,7 @@ const ContactSection = () => {
             <iframe
               title="CMA group of companies office location"
               src="https://www.google.com/maps?q=M-18+Zain+Mobile+Mall+Main+Tariq+Road+Karachi&output=embed"
-              className="w-full h-full border-0"
+              className="w-full h-full border-0 grayscale contrast-125"
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

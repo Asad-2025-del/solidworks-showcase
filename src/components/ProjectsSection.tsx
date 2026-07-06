@@ -1,80 +1,87 @@
 import { Link } from "react-router-dom";
-import { Cog, BarChart3, Building2 } from "lucide-react";
+import { Cog, BarChart3, Building2, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 
-const cardVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.15, duration: 0.5, ease: [0, 0, 0.2, 1] as const },
-  }),
-};
+const projects = [
+  {
+    to: "/architecture-projects",
+    icon: Building2,
+    tag: "Discipline · Civil",
+    title: "Architecture & Interior",
+    desc: "Revit BIM, 2D/3D plans, photo-realistic exterior and interior renderings.",
+  },
+  {
+    to: "/cad-projects",
+    icon: Cog,
+    tag: "Discipline · Mechanical",
+    title: "CAD Projects",
+    desc: "SolidWorks modelling, assembly design, and industrial product design.",
+  },
+  {
+    to: "/analysis-projects",
+    icon: BarChart3,
+    tag: "Discipline · Analysis",
+    title: "CFD & FEA Studies",
+    desc: "ANSYS Fluent CFD, FEA stress, thermal and aerodynamic studies.",
+  },
+];
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-24 bg-background">
+    <section id="projects" className="py-32 border-b border-border">
       <div className="container mx-auto px-6">
         <motion.div
-          className="mb-16 text-center"
+          className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-20"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.5 }}
         >
-          <p className="mb-2 text-sm font-mono uppercase tracking-[0.2em] text-primary">
-            Portfolio
-          </p>
-          <h2 className="text-4xl md:text-5xl font-bold">
-            Our <span className="text-gradient">Projects</span>
-          </h2>
-          <p className="mt-4 mx-auto max-w-xl text-muted-foreground">
-            Explore our work across architecture, CAD design, and engineering simulation.
+          <div className="max-w-2xl">
+            <p className="mb-6 text-[10px] font-mono uppercase tracking-[0.3em] text-primary">
+              — 03 / Selected Works
+            </p>
+            <h2 className="text-4xl md:text-6xl font-bold tracking-tight leading-[1.02]">
+              A cross-section of
+              <br />
+              <span className="text-gradient">engineered outcomes.</span>
+            </h2>
+          </div>
+          <p className="max-w-sm text-muted-foreground border-l border-primary/50 pl-6">
+            Explore case studies across architecture, mechanical CAD, and
+            computational engineering simulation.
           </p>
         </motion.div>
 
-        <div className="grid gap-8 md:grid-cols-3 max-w-5xl mx-auto">
-          {[
-            {
-              to: "/architecture-projects",
-              icon: Building2,
-              title: "Architecture & Interior",
-              desc: "Revit BIM, 2D/3D plans, photo-realistic exterior and interior renderings.",
-            },
-            {
-              to: "/cad-projects",
-              icon: Cog,
-              title: "CAD Projects",
-              desc: "SolidWorks modelling, assembly design, and industrial product design.",
-            },
-            {
-              to: "/analysis-projects",
-              icon: BarChart3,
-              title: "Analysis & CFD",
-              desc: "ANSYS Fluent CFD, FEA stress, thermal and aerodynamic studies.",
-            },
-          ].map((card, i) => (
+        <div className="grid gap-px md:grid-cols-3 bg-border border border-border">
+          {projects.map((card, i) => (
             <motion.div
               key={card.to}
-              custom={i}
-              variants={cardVariants}
-              initial="hidden"
-              whileInView="visible"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
+              transition={{ delay: i * 0.1, duration: 0.5 }}
             >
               <Link
                 to={card.to}
-                className="group relative block h-full overflow-hidden rounded-xl border border-border bg-card p-10 text-center transition-all duration-300 hover:border-primary/50 hover:glow-sm"
+                className="group relative block h-full bg-background p-10 hover:bg-card transition-colors duration-300"
               >
-                <motion.div
-                  className="mb-6 mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 border border-primary/30 group-hover:bg-primary/20 transition-colors"
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <card.icon size={32} className="text-primary" />
-                </motion.div>
-                <h3 className="mb-3 text-2xl font-bold text-foreground">{card.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{card.desc}</p>
+                <div className="flex items-start justify-between mb-16">
+                  <card.icon size={36} strokeWidth={1.25} className="text-primary" />
+                  <ArrowUpRight
+                    size={20}
+                    className="text-muted-foreground group-hover:text-primary group-hover:-translate-y-1 group-hover:translate-x-1 transition-all"
+                  />
+                </div>
+                <p className="mb-2 text-[10px] font-mono uppercase tracking-[0.22em] text-primary">
+                  {card.tag}
+                </p>
+                <h3 className="mb-3 text-2xl font-semibold tracking-tight text-foreground">
+                  {card.title}
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {card.desc}
+                </p>
               </Link>
             </motion.div>
           ))}

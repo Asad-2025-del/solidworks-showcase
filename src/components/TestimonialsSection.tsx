@@ -1,89 +1,72 @@
 import { motion } from "framer-motion";
-import { Quote, Star, TrendingUp, Clock, Rocket } from "lucide-react";
+import { Quote, TrendingUp, Clock, Rocket } from "lucide-react";
 
 const testimonials = [
   {
     name: "Hamza T.",
     role: "Founder — EV Battery Startup",
     quote:
-      "We were a 3-person team trying to validate a Li-ion pack design before our seed round. CMA group ran the CFD on both straight and Z-type airflow layouts and gave us a clear recommendation backed by Nusselt/Reynolds correlations. We walked into our investor meeting with real thermal data — and closed the round.",
-    stars: 5,
+      "We were a 3-person team trying to validate a Li-ion pack design before our seed round. CMA group ran CFD on both straight and Z-type airflow layouts and gave us a clear recommendation backed by Nusselt/Reynolds correlations. We walked into our investor meeting with real thermal data — and closed the round.",
   },
   {
     name: "Ayesha M.",
     role: "Co-founder — Boutique Real Estate Studio",
     quote:
       "As a brand-new studio we couldn't afford an in-house BIM team. Asadullah's team delivered the Revit floor plans, exterior renders, and a 5D walkthrough in under two weeks. Our first client signed the same day they saw the walkthrough.",
-    stars: 5,
   },
   {
     name: "Daniyal R.",
     role: "Mechanical Lead — HVAC Startup",
     quote:
-      "Our finned-tube heat exchanger was failing on uniformity. CMA group rebuilt the CAD, ran ANSYS Fluent across the coil, and pinpointed exactly where the fin pitch was wrong. Second prototype passed validation — saved us at least 6 weeks and one prototype cycle.",
-    stars: 5,
+      "Our finned-tube heat exchanger was failing on uniformity. CMA group rebuilt the CAD, ran ANSYS Fluent across the coil, and pinpointed exactly where the fin pitch was wrong. Second prototype passed validation — saved us six weeks and a prototype cycle.",
   },
 ];
 
 const caseStudies = [
-  {
-    icon: Rocket,
-    metric: "15+",
-    label: "Projects Delivered",
-    detail: "Across civil, structural, and mechanical disciplines",
-  },
-  {
-    icon: TrendingUp,
-    metric: "+9.4%",
-    label: "Lift Improvement",
-    detail: "F1 front wing CFD vs baseline — real client deliverable",
-  },
-  {
-    icon: Clock,
-    metric: "2 wks",
-    label: "Avg. Turnaround",
-    detail: "From kickoff to first deliverable for startup clients",
-  },
+  { icon: Rocket, metric: "15+", label: "Projects Delivered", detail: "Across civil, structural, and mechanical disciplines" },
+  { icon: TrendingUp, metric: "+9.4%", label: "Lift Improvement", detail: "F1 front wing CFD vs baseline — real client deliverable" },
+  { icon: Clock, metric: "2 wks", label: "Avg. Turnaround", detail: "From kickoff to first deliverable for startup clients" },
 ];
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-24 bg-muted/30">
+    <section className="py-32 bg-card/40 border-b border-border">
       <div className="container mx-auto px-6">
-        {/* Header */}
         <motion.div
-          className="mb-16 text-center"
+          className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.5 }}
         >
-          <p className="mb-2 text-sm font-mono uppercase tracking-[0.2em] text-primary">
-            Real Results
-          </p>
-          <h2 className="text-4xl md:text-5xl font-bold">
-            Client <span className="text-gradient">Success Stories</span>
-          </h2>
-          <p className="mt-4 mx-auto max-w-xl text-muted-foreground">
-            15+ projects shipped for founders, studios, and engineering teams — here's what they say.
+          <div className="max-w-2xl">
+            <p className="mb-6 text-[10px] font-mono uppercase tracking-[0.3em] text-primary">
+              — 04 / Client Outcomes
+            </p>
+            <h2 className="text-4xl md:text-6xl font-bold tracking-tight leading-[1.02]">
+              Measured results.<br />
+              <span className="text-gradient">Real founders.</span>
+            </h2>
+          </div>
+          <p className="max-w-sm text-muted-foreground border-l border-primary/50 pl-6">
+            Fifteen-plus projects shipped for founders, studios, and engineering
+            teams — here's what they say.
           </p>
         </motion.div>
 
-        {/* Case Study Metrics */}
-        <div className="grid gap-6 sm:grid-cols-3 mb-16">
+        {/* Metrics */}
+        <div className="grid gap-px sm:grid-cols-3 mb-px bg-border border border-border">
           {caseStudies.map((cs, i) => (
             <motion.div
               key={cs.label}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
-              transition={{ delay: i * 0.1, duration: 0.5, ease: [0, 0, 0.2, 1] as const }}
-              className="rounded-lg border border-border bg-card p-6 text-center hover:border-primary/50 hover:glow-sm transition-all duration-300"
+              transition={{ delay: i * 0.08, duration: 0.5 }}
+              className="bg-background p-8"
             >
-              <div className="mx-auto mb-3 inline-flex rounded-md bg-primary/10 p-3 text-primary">
-                <cs.icon size={24} />
-              </div>
-              <div className="text-3xl font-bold text-primary mb-1">{cs.metric}</div>
+              <cs.icon size={24} strokeWidth={1.5} className="text-primary mb-6" />
+              <div className="text-4xl font-bold text-foreground mb-2 tracking-tight">{cs.metric}</div>
               <div className="text-sm font-semibold text-foreground mb-1">{cs.label}</div>
               <div className="text-xs text-muted-foreground">{cs.detail}</div>
             </motion.div>
@@ -91,33 +74,25 @@ const TestimonialsSection = () => {
         </div>
 
         {/* Testimonials */}
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-px md:grid-cols-3 bg-border border border-border border-t-0">
           {testimonials.map((t, i) => (
             <motion.div
               key={t.name}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
-              transition={{ delay: i * 0.12, duration: 0.5, ease: [0, 0, 0.2, 1] as const }}
-              className="group rounded-lg border border-border bg-card p-8 transition-all duration-300 hover:border-primary/50 hover:glow-sm flex flex-col"
+              transition={{ delay: i * 0.1, duration: 0.5 }}
+              className="bg-background p-10 flex flex-col"
             >
-              <Quote size={24} className="text-primary/40 mb-4" />
-              <p className="text-sm text-muted-foreground leading-relaxed flex-1 italic">
+              <Quote size={28} className="text-primary/40 mb-6" strokeWidth={1.25} />
+              <p className="text-base text-foreground/90 leading-relaxed flex-1 mb-8">
                 "{t.quote}"
               </p>
-              <div className="mt-6 flex items-center gap-3 border-t border-border pt-4">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary font-bold text-sm">
-                  {t.name.charAt(0)}
+              <div className="pt-6 border-t border-border">
+                <div className="text-sm font-semibold text-foreground">{t.name}</div>
+                <div className="mt-1 text-[10px] font-mono uppercase tracking-[0.22em] text-muted-foreground">
+                  {t.role}
                 </div>
-                <div>
-                  <div className="text-sm font-semibold text-foreground">{t.name}</div>
-                  <div className="text-xs text-muted-foreground">{t.role}</div>
-                </div>
-              </div>
-              <div className="flex gap-0.5 mt-3">
-                {Array.from({ length: t.stars }).map((_, s) => (
-                  <Star key={s} size={14} className="fill-primary text-primary" />
-                ))}
               </div>
             </motion.div>
           ))}

@@ -18,48 +18,46 @@ const industries = [
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-24 bg-background">
+    <section id="about" className="py-32 bg-card/40 border-b border-border">
       <div className="container mx-auto px-6">
-        <div className="grid gap-12 lg:grid-cols-2 items-center">
+        <div className="grid gap-16 lg:grid-cols-12 items-start">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            className="lg:col-span-7"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6 }}
           >
-            <p className="mb-2 text-sm font-mono uppercase tracking-[0.2em] text-primary">
-              About Us
+            <p className="mb-6 text-[10px] font-mono uppercase tracking-[0.3em] text-primary">
+              — 05 / The Group
             </p>
-            <h2 className="mb-6 text-4xl md:text-5xl font-bold">
-              An Integrated <span className="text-gradient">Engineering Group</span>
+            <h2 className="mb-8 text-4xl md:text-6xl font-bold tracking-tight leading-[1.02]">
+              An integrated<br />
+              <span className="text-gradient">engineering group.</span>
             </h2>
-            <p className="mb-4 text-muted-foreground leading-relaxed">
-              <strong className="text-foreground">CMA group of companies</strong> is a
-              multi-disciplinary consultancy bringing together{" "}
-              <strong className="text-foreground">civil</strong>,{" "}
-              <strong className="text-foreground">structural</strong>, and{" "}
-              <strong className="text-foreground">mechanical</strong> engineering under
-              one team. Led by <strong className="text-foreground">Asadullah Anis</strong>,
-              we collaborate with architects, contractors, manufacturers, and product
-              teams to deliver coordinated, code-compliant solutions.
+            <p className="mb-6 text-lg text-muted-foreground leading-relaxed">
+              <span className="text-foreground font-medium">CMA group of companies</span> is a
+              multi-disciplinary consultancy bringing together civil, structural,
+              and mechanical engineering under one team. Led by{" "}
+              <span className="text-foreground font-medium">Asadullah Anis</span>, we collaborate
+              with architects, contractors, manufacturers, and product teams to
+              deliver coordinated, code-compliant solutions.
             </p>
-            <p className="mb-6 text-muted-foreground leading-relaxed">
-              From <strong className="text-foreground">architectural floor plans</strong>{" "}
-              and <strong className="text-foreground">5D walkthroughs</strong> to{" "}
-              <strong className="text-foreground">structural FEA</strong> and{" "}
-              <strong className="text-foreground">production CAD</strong> — every
-              deliverable is rigorously validated, professionally documented, and ready
-              for construction or manufacturing.
+            <p className="mb-10 text-muted-foreground leading-relaxed">
+              From architectural floor plans and 5D walkthroughs to structural
+              FEA and production CAD — every deliverable is rigorously validated,
+              professionally documented, and ready for construction or
+              manufacturing.
             </p>
 
-            <p className="mb-4 text-xs font-mono uppercase tracking-wider text-primary">
-              Industries We Serve
+            <p className="mb-4 text-[10px] font-mono uppercase tracking-[0.22em] text-primary">
+              Industries Served
             </p>
             <div className="flex flex-wrap gap-2">
               {industries.map((tag) => (
                 <span
                   key={tag}
-                  className="rounded-full bg-primary/10 border border-primary/20 px-3 py-1 text-xs font-mono text-primary"
+                  className="border border-border px-3 py-1.5 text-xs font-mono text-muted-foreground"
                 >
                   {tag}
                 </span>
@@ -68,21 +66,20 @@ const AboutSection = () => {
           </motion.div>
 
           <motion.div
-            className="grid grid-cols-2 gap-6"
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            className="lg:col-span-5 grid grid-cols-2 gap-px bg-border border border-border"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, delay: 0.15 }}
           >
             {stats.map((stat) => (
-              <div
-                key={stat.label}
-                className="rounded-lg border border-border bg-card p-6 text-center hover:border-primary/50 hover:glow-sm transition-all duration-300"
-              >
-                <div className="text-3xl font-bold text-primary mb-1">
+              <div key={stat.label} className="bg-background p-8">
+                <div className="text-5xl font-bold text-foreground mb-3 tracking-tight">
                   {stat.value}
                 </div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
+                <div className="text-[10px] font-mono uppercase tracking-[0.22em] text-muted-foreground">
+                  {stat.label}
+                </div>
               </div>
             ))}
           </motion.div>
