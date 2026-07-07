@@ -19,12 +19,13 @@ const CadProjects = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>CAD Projects — SolidWorks Modeling & Drawings | CMA group of companies</title>
-        <meta name="description" content="SolidWorks CAD modeling, assembly design, and manufacturing drawings — gearboxes, lifts, ergonomic products, and industrial concepts." />
-        <link rel="canonical" href="https://mech-gallery-plus.lovable.app/cad-projects" />
-        <meta property="og:title" content="CAD Projects — SolidWorks Modeling & Drawings | CMA group of companies" />
+        <title>CAD Design Services — SolidWorks, Fusion 360 Modeling & Drawings | CMA group</title>
+        <meta name="description" content="Professional CAD design services: SolidWorks 3D modeling, assembly design, DFM/DFA optimization, and production-ready manufacturing drawings for product development." />
+        <link rel="canonical" href="https://cmagroup.lovable.app/cad-projects" />
+        <meta property="og:title" content="CAD Design Services — SolidWorks Modeling & Drawings | CMA group" />
         <meta property="og:description" content="SolidWorks CAD modeling, assembly design, and manufacturing drawings — gearboxes, lifts, ergonomic products, and industrial concepts." />
-        <meta property="og:url" content="https://mech-gallery-plus.lovable.app/cad-projects" />
+        <meta property="og:url" content="https://cmagroup.lovable.app/cad-projects" />
+        <meta property="og:type" content="website" />
       </Helmet>
       <Navbar />
       <main className="pt-24 pb-16">

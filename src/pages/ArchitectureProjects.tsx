@@ -19,11 +19,13 @@ const ArchitectureProjects = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Architecture & Interior Projects — Revit BIM & Renderings | CMA group of companies</title>
-        <meta name="description" content="Architectural BIM, 2D/3D plans, exterior and interior photo-realistic renderings using Revit, AutoCAD, V-Ray, Lumion and Corona." />
-        <link rel="canonical" href="https://apexenggrp.lovable.app/architecture-projects" />
-        <meta property="og:title" content="Architecture & Interior Projects | CMA group of companies" />
-        <meta property="og:description" content="Architectural BIM, 2D/3D plans, exterior and interior photo-realistic renderings." />
+        <title>Architectural Design & BIM Modeling Services — Revit, Lumion, V-Ray | CMA group</title>
+        <meta name="description" content="Architectural design, BIM modeling, 2D/3D floor plans, and photo-realistic exterior & interior renderings using Revit, AutoCAD, V-Ray, Lumion and Corona. Karachi-based, worldwide delivery." />
+        <link rel="canonical" href="https://cmagroup.lovable.app/architecture-projects" />
+        <meta property="og:title" content="Architectural Design & BIM Modeling Services | CMA group of companies" />
+        <meta property="og:description" content="Architectural BIM, 2D/3D plans, and photo-realistic exterior & interior visualisation." />
+        <meta property="og:url" content="https://cmagroup.lovable.app/architecture-projects" />
+        <meta property="og:type" content="website" />
       </Helmet>
       <Navbar />
       <main className="pt-24 pb-16">
