@@ -60,6 +60,15 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Engineering Design Services — CAD, CFD, FEA, BIM & Architectural Design | CMA group</title>
+        <meta name="description" content="CMA group of companies delivers professional engineering design services worldwide: CAD design, CFD analysis, FEA analysis, mechanical design, BIM modeling, architectural design, and product development." />
+        <link rel="canonical" href="https://cmagroup.lovable.app/" />
+        <meta property="og:url" content="https://cmagroup.lovable.app/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Engineering Design Services — CAD, CFD, FEA & BIM | CMA group" />
+        <meta property="og:description" content="Professional engineering design services: CAD, CFD, FEA, mechanical design, BIM modeling, architectural design, and product development. Karachi-based, worldwide delivery." />
+      </Helmet>
       <Navbar />
       <main>
         <HeroSection />
