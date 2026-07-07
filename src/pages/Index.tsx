@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import TrustedBySection from "@/components/TrustedBySection";
@@ -13,27 +14,38 @@ import PricingSection from "@/components/PricingSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
+const SITE = "https://cmagroup.lovable.app";
+
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
+  "@type": ["ProfessionalService", "LocalBusiness"],
   name: "CMA group of companies",
   description:
-    "Multi-disciplinary engineering consultancy offering civil design, structural engineering, and mechanical CAD/FEA/CFD services.",
-  url: "https://mech-gallery-plus.lovable.app",
-  telephone: "+923378284111",
+    "Multi-disciplinary engineering consultancy offering engineering design services — CAD, CFD, FEA, mechanical design, BIM modeling, architectural design, structural engineering, and product development.",
+  url: SITE,
+  telephone: "+92-337-8284111",
   email: "cmagroup.pk@gmail.com",
-  address: { "@type": "PostalAddress", streetAddress: "M-18, ZAIN MOBILE MALL, MAIN TARIQ ROAD", addressLocality: "Karachi", addressCountry: "PK" },
+  priceRange: "$$",
+  image: `${SITE}/placeholder.svg`,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "M-18, ZAIN MOBILE MALL, MAIN TARIQ ROAD",
+    addressLocality: "Karachi",
+    addressRegion: "Sindh",
+    addressCountry: "PK",
+  },
   areaServed: "Worldwide",
   serviceType: [
-    "Civil Engineering",
-    "Architectural Design",
-    "3D & 5D Architectural Visualization",
-    "Structural Engineering",
-    "Structural FEA",
-    "Mechanical Engineering",
-    "CAD Modeling",
-    "ANSYS FEA",
+    "Engineering Design Services",
+    "CAD Design",
     "CFD Analysis",
+    "FEA Analysis",
+    "Mechanical Design",
+    "BIM Modeling",
+    "Architectural Design",
+    "Product Development",
+    "Structural Engineering",
+    "3D & 5D Architectural Visualization",
   ],
 };
 

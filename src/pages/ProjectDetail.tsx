@@ -6,7 +6,7 @@ import projects from "@/data/projects";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const SITE = "https://mech-gallery-plus.lovable.app";
+const SITE = "https://cmagroup.lovable.app";
 
 const ProjectDetail = () => {
   const { slug } = useParams<{ slug: string }>();

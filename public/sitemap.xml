@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://mech-gallery-plus.lovable.app/</loc><priority>1.0</priority></url>
-  
-  <url><loc>https://mech-gallery-plus.lovable.app/cad-projects</loc><priority>0.8</priority></url>
-  <url><loc>https://mech-gallery-plus.lovable.app/analysis-projects</loc><priority>0.8</priority></url>
-  <url><loc>https://mech-gallery-plus.lovable.app/project/gearbox-assembly</loc><priority>0.7</priority></url>
-  <url><loc>https://mech-gallery-plus.lovable.app/project/ergonomic-office-chair</loc><priority>0.7</priority></url>
-  <url><loc>https://mech-gallery-plus.lovable.app/project/scissor-lift</loc><priority>0.7</priority></url>
-  <url><loc>https://mech-gallery-plus.lovable.app/project/mechanical-assembly</loc><priority>0.7</priority></url>
-  <url><loc>https://mech-gallery-plus.lovable.app/project/pressure-vessel-fea</loc><priority>0.7</priority></url>
-  <url><loc>https://mech-gallery-plus.lovable.app/project/mixing-tank-cfd</loc><priority>0.7</priority></url>
-  <url><loc>https://mech-gallery-plus.lovable.app/project/airfoil-cfd</loc><priority>0.7</priority></url>
-  <url><loc>https://mech-gallery-plus.lovable.app/project/heatsink-thermal</loc><priority>0.7</priority></url>
-  <url><loc>https://mech-gallery-plus.lovable.app/project/pipeline-junction-cfd</loc><priority>0.7</priority></url>
-  <url><loc>https://mech-gallery-plus.lovable.app/project/subsea-manifold</loc><priority>0.7</priority></url>
-  <url><loc>https://mech-gallery-plus.lovable.app/project/turbine-blade-fea</loc><priority>0.7</priority></url>
-  <url><loc>https://mech-gallery-plus.lovable.app/project/aircraft-wing-rib</loc><priority>0.7</priority></url>
-  <url><loc>https://mech-gallery-plus.lovable.app/project/hvac-duct-cfd</loc><priority>0.7</priority></url>
-  <url><loc>https://mech-gallery-plus.lovable.app/project/ahu-design</loc><priority>0.7</priority></url>
+  <url><loc>https://cmagroup.lovable.app/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://cmagroup.lovable.app/cad-projects</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cmagroup.lovable.app/analysis-projects</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cmagroup.lovable.app/architecture-projects</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <url><loc>https://cmagroup.lovable.app/project/quenching-chamber-cad</loc><priority>0.7</priority></url>
+  <url><loc>https://cmagroup.lovable.app/project/finned-tube-heat-exchanger-cad</loc><priority>0.7</priority></url>
+  <url><loc>https://cmagroup.lovable.app/project/f1-front-wing-cad</loc><priority>0.7</priority></url>
+  <url><loc>https://cmagroup.lovable.app/project/battery-pack-cad</loc><priority>0.7</priority></url>
+  <url><loc>https://cmagroup.lovable.app/project/aircraft-wing-cad</loc><priority>0.7</priority></url>
+
+  <url><loc>https://cmagroup.lovable.app/project/quenching-chamber-cfd</loc><priority>0.7</priority></url>
+  <url><loc>https://cmagroup.lovable.app/project/finned-tube-heat-exchanger-cfd</loc><priority>0.7</priority></url>
+  <url><loc>https://cmagroup.lovable.app/project/f1-front-wing-cfd</loc><priority>0.7</priority></url>
+  <url><loc>https://cmagroup.lovable.app/project/battery-pack-cfd</loc><priority>0.7</priority></url>
+  <url><loc>https://cmagroup.lovable.app/project/aircraft-wing-cfd</loc><priority>0.7</priority></url>
+
+  <url><loc>https://cmagroup.lovable.app/project/residential-bim-plans</loc><priority>0.7</priority></url>
+  <url><loc>https://cmagroup.lovable.app/project/modern-villa-exteriors</loc><priority>0.7</priority></url>
+  <url><loc>https://cmagroup.lovable.app/project/luxury-interior-design</loc><priority>0.7</priority></url>
+  <url><loc>https://cmagroup.lovable.app/project/art-pavilion-3d</loc><priority>0.7</priority></url>
 </urlset>
